@@ -1,0 +1,56 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 323, 39 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 15.5, 96.5 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 21, 602 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 994.75, 10 )
+
+[sub_resource type="RectangleShape2D" id=5]
+extents = Vector2( 61, 681.5 )
+
+[sub_resource type="RectangleShape2D" id=6]
+extents = Vector2( 1064, 10 )
+
+[node name="World" type="Node2D"]
+
+[node name="player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 124, 128 )
+
+[node name="floor" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
+position = Vector2( 323, 396 )
+shape = SubResource( 1 )
+
+[node name="wall" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
+position = Vector2( 16, 269 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( -24, 567 )
+shape = SubResource( 3 )
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 959.25, 1076 )
+shape = SubResource( 4 )
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1971, 483 )
+shape = SubResource( 5 )
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 1016, 0 )
+shape = SubResource( 6 )
