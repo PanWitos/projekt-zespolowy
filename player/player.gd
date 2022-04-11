@@ -13,7 +13,7 @@ onready var sprite = $Sprite
 var velocity_h = 0
 var velocity_v = 0
 var velocity = Vector2.ZERO
-var ADDITIONAL_JUMPS = 0
+var ADDITIONAL_JUMPS = 1
 var JUMPS_LEFT = 0
 var acceleration_v = 0
 
