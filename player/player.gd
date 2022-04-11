@@ -6,11 +6,17 @@ const MAX_SPEED_V = 1600
 const FRICTION = 80000
 const GRAVITY = 1300
 
+onready var animation_player = $AnimationPlayer
+onready var sprite = $Sprite
+
 var velocity_h = 0
 var velocity_v = 0
 var velocity = Vector2.ZERO
 var JUMPS = 2
 var acceleration_v = 0
+
+func _ready():
+	animation_player.play("Idle")
 
 func numberMoveToward(from, to, delta):
 	if from < to:
@@ -27,6 +33,10 @@ func numberMoveToward(from, to, delta):
 		 return to
 
 func _physics_process(delta):
+	
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().quit()
+		
 	var input_vector = Vector2.ZERO
 	input_vector.x = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")) * MAX_SPEED_H
 	
@@ -47,7 +57,5 @@ func _physics_process(delta):
 	
 	velocity.x = velocity_h
 	velocity.y = velocity_v
-	
-	print(is_on_floor())
 	
 	move_and_slide(velocity, Vector2.UP)
