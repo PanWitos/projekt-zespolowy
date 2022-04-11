@@ -48,4 +48,6 @@ func _physics_process(delta):
 	velocity.x = velocity_h
 	velocity.y = velocity_v
 	
-	move_and_slide(velocity)
+	print(is_on_floor())
+	
+	move_and_slide(velocity, Vector2.UP)
