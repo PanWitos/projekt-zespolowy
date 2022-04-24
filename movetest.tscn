@@ -20,7 +20,7 @@ extents = Vector2( 61, 681.5 )
 [sub_resource type="RectangleShape2D" id=6]
 extents = Vector2( 1064, 10 )
 
-[node name="World" type="Node2D"]
+[node name="movetest" type="Node2D"]
 
 [node name="player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 124, 128 )

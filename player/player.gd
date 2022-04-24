@@ -9,6 +9,8 @@ const JUMP_SPEED = -1600
 
 onready var animation_player = $AnimationPlayer
 onready var sprite = $Sprite
+onready var animationTree = $AnimationTree
+onready var animationState = animationTree.get("parameters/playback")
 
 var velocity_h = 0
 var velocity_v = 0
@@ -16,9 +18,6 @@ var velocity = Vector2.ZERO
 var ADDITIONAL_JUMPS = 1
 var JUMPS_LEFT = 0
 var acceleration_v = 0
-
-func _ready():
-	animation_player.play("Idle")
 
 func numberMoveToward(from, to, delta):
 	
@@ -56,14 +55,34 @@ func _physics_process(delta):
 		
 	input_vector.y = MAX_SPEED_V
 	
+	if is_on_ceiling():
+		acceleration_v = 0
+		velocity_v = 0
+	
 	acceleration_v = numberMoveToward(acceleration_v, MAX_SPEED_V, GRAVITY * delta)
 	
 	if input_vector.x != 0:
 		velocity_h = numberMoveToward(velocity_h, input_vector.x, ACCELERATION * delta)
+		if velocity_h > 0:
+			sprite.flip_h = false
+		elif velocity_h < 0:
+			sprite.flip_h = true
+		animationState.travel("Run")
 	else:
 		velocity_h = numberMoveToward(velocity_h, 0 , ACCELERATION * delta)
+		if velocity_h == 0:
+			animationState.travel("Idle")
 	
 	velocity_v = numberMoveToward(velocity_v, MAX_SPEED_V, acceleration_v)
+	
+	if velocity_v > 0 && !is_on_floor():
+		animationState.travel("Fall")
+		
+	if velocity_v < 0:
+		animationState.travel("Jump")
+	
+	if Input.is_action_just_pressed("Attack"):
+		animationState.travel("Attack")
 	
 	velocity.x = velocity_h
 	velocity.y = velocity_v
