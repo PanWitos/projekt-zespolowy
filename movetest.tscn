@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/locations/Stronghold/Terrain/Stronghold_Terrain_Tileset.png" type="Texture" id=2]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 323, 39 )
@@ -54,3 +55,7 @@ shape = SubResource( 5 )
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2( 1016, 0 )
 shape = SubResource( 6 )
+
+[node name="StrongholdTerrainTileset" type="Sprite" parent="."]
+position = Vector2( 392, 231 )
+texture = ExtResource( 2 )
