@@ -55,7 +55,8 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 11, 12, 13, 14, 15 ]
 }
 
-[node name="KinematicBody2D" type="KinematicBody2D"]
+[node name="player" type="KinematicBody2D"]
+collision_mask = 17
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -74,4 +75,5 @@ anims/RESET = SubResource( 3 )
 anims/Run = SubResource( 4 )
 
 [node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2( 0, -250 )
 current = true

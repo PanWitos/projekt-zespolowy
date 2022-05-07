@@ -14,6 +14,10 @@ config/name="gierka"
 run/main_scene="res://movetest.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+SignalBus="*res://SignalBus.tscn"
+
 [display]
 
 window/size/width=1920
