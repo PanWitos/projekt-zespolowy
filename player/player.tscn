@@ -72,3 +72,6 @@ vframes = 4
 anims/Idle = SubResource( 2 )
 anims/RESET = SubResource( 3 )
 anims/Run = SubResource( 4 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+current = true
