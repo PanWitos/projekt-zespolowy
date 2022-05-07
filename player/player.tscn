@@ -1,14 +1,16 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=39 format=2]
 
 [ext_resource path="res://assets/player/player.png" type="Texture" id=1]
 [ext_resource path="res://player/player.gd" type="Script" id=2]
+[ext_resource path="res://Hitboxes_and_Hurtboxes/hitbox.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36, 38 )
 
 [sub_resource type="Animation" id=5]
 resource_name = "Attack"
-length = 0.5
+length = 0.25
+step = 0.05
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -16,10 +18,36 @@ tracks/0/loop_wrap = true
 tracks/0/imported = false
 tracks/0/enabled = true
 tracks/0/keys = {
-"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2 ),
 "transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 32, 33, 34, 35, 36 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SwordHitboxPivot/SwordHitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.25 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "startComboTimer"
+} ]
 }
 
 [sub_resource type="Animation" id=6]
@@ -86,6 +114,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SwordHitboxPivot/SwordHitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ true ]
 }
 
 [sub_resource type="Animation" id=4]
@@ -181,6 +221,10 @@ graph_offset = Vector2( -397.192, -153.46 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=13]
 
+[sub_resource type="CapsuleShape2D" id=42]
+radius = 40.0
+height = 10.0
+
 [node name="player" type="KinematicBody2D"]
 script = ExtResource( 2 )
 
@@ -207,3 +251,26 @@ tree_root = SubResource( 12 )
 anim_player = NodePath("../AnimationPlayer")
 active = true
 parameters/playback = SubResource( 13 )
+
+[node name="SwordHitboxPivot" type="Position2D" parent="."]
+position = Vector2( 0, 5 )
+
+[node name="SwordHitbox" parent="SwordHitboxPivot" instance=ExtResource( 3 )]
+position = Vector2( 45, 0 )
+rotation = 1.5708
+
+[node name="CollisionShape2D" parent="SwordHitboxPivot/SwordHitbox" index="0"]
+shape = SubResource( 42 )
+disabled = true
+
+[node name="ComboTimer" type="Timer" parent="."]
+
+[node name="AttackCooldownTimer" type="Timer" parent="."]
+
+[node name="DashTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="ComboTimer" to="." method="_on_ComboTimer_timeout"]
+[connection signal="timeout" from="AttackCooldownTimer" to="." method="_on_AttackCooldownTimer_timeout"]
+[connection signal="timeout" from="DashTimer" to="." method="_on_DashTimer_timeout"]
+
+[editable path="SwordHitboxPivot/SwordHitbox"]
