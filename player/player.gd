@@ -1,19 +1,21 @@
 extends KinematicBody2D
 
 const ACCELERATION = 4000
-const MAX_SPEED_H = 650
+const MAX_SPEED_H = 500
 const MAX_SPEED_V = 1600
 const FRICTION = 5000
 const GRAVITY = 1300
 const JUMP_SPEED = -1600
 const DASH_LEN = 500
-const DASH_TIME = 0.1
+const DASH_TIME = 0.2
 const ATTACK_COOLDOWN = 0.8
 const COMBO_PERIOD = 0.5
+const DIVE_SPEED = Vector2(0, 4000)
 
 enum {
 	NORMAL,
-	DASH
+	DASH,
+	DIVE
 }
 
 var state = NORMAL
@@ -36,7 +38,8 @@ var acceleration_v = 0
 var dash_velocity = Vector2(DASH_LEN/DASH_TIME, 0)
 var player_inverted = false
 var can_attack = true
-export var MAX_ATTACKS = 3
+export var max_combo = 3
+var attacks_performed = 0
 
 
 func _ready():
@@ -72,6 +75,12 @@ func oppositeSigns(x, y):
 	
 func startComboTimer():
 	combo_timer.start()
+	
+func attackPerformed():
+	startComboTimer()
+	attacks_performed += 1
+	if attacks_performed >= max_combo:
+		can_attack = false
 	
 func _physics_process(delta):
 	
@@ -133,6 +142,10 @@ func _physics_process(delta):
 			if Input.is_action_just_pressed("Dash"):
 				state = DASH
 				dash_timer.start()
+				
+			if Input.is_action_just_pressed("Dive") and !is_on_floor():
+				state = DIVE
+				animationState.travel("Fall")
 			
 			sprite.flip_h = player_inverted
 			
@@ -149,7 +162,11 @@ func _physics_process(delta):
 					move_and_slide(-dash_velocity, Vector2.UP)
 				else:
 					move_and_slide(dash_velocity, Vector2.UP)
-	
+		DIVE:
+			if is_on_floor():
+				state = NORMAL
+			else:
+				move_and_slide(DIVE_SPEED, Vector2.UP)
 
 
 func _on_ComboTimer_timeout():
@@ -159,7 +176,13 @@ func _on_ComboTimer_timeout():
 
 func _on_AttackCooldownTimer_timeout():
 	can_attack = true
+	attacks_performed = 0
 
 
 func _on_DashTimer_timeout():
 	state = NORMAL
+
+
+func _on_PlayerHurtbox_area_entered(area):
+	print("Dostalem na leb")
+	#TODO: player getting hit function
