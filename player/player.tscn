@@ -228,6 +228,8 @@ height = 10.0
 
 [node name="player" type="KinematicBody2D"]
 collision_layer = 2
+collision_mask = 17
+
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -290,3 +292,8 @@ polygon = PoolVector2Array( 15, -33, 22, 0, 17, 31, -22, 30, -27, 0, -18, -19 )
 
 [editable path="SwordHitboxPivot/SwordHitbox"]
 [editable path="PlayerHurtbox"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2( 0, -250 )
+current = true
+

@@ -1,13 +1,11 @@
 [gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://player/player.tscn" type="PackedScene" id=1]
-[ext_resource path="res://testEnemy.tscn" type="PackedScene" id=2]
 
-[sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 323, 25 )
+[ext_resource path="res://assets/locations/GrassLand/Background/GrassLand_Background_Guide.png" type="Texture" id=2]
+[ext_resource path="res://assets/locations/TileMapForeground.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/locations/TileMapBackground.tscn" type="PackedScene" id=4]
 
-[sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 15.5, 96.5 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 21, 602 )
@@ -23,31 +21,27 @@ extents = Vector2( 1064, 10 )
 
 [node name="movetest" type="Node2D"]
 
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 0, 16 )
+scale = Vector2( 5.18919, 5.90476 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( 0, 0, 370, 210 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+margin_left = 8.0
+margin_right = 1976.0
+margin_bottom = 1144.0
+color = Color( 0.262745, 0.752941, 0.815686, 1 )
+
+[node name="TileMapBackground" parent="." instance=ExtResource( 4 )]
+
+[node name="TileMapForeground" parent="." instance=ExtResource( 3 )]
+
 [node name="player" parent="." instance=ExtResource( 1 )]
-position = Vector2( 124, 128 )
-collision_mask = 17
-
-[node name="floor" type="StaticBody2D" parent="."]
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="floor"]
-position = Vector2( 323, 396 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="floor"]
-position = Vector2( 503, 880 )
-shape = SubResource( 1 )
-
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="floor"]
-position = Vector2( 1385, 674 )
-shape = SubResource( 1 )
-
-[node name="wall" type="StaticBody2D" parent="."]
-collision_mask = 3
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="wall"]
-position = Vector2( 16, 269 )
-shape = SubResource( 2 )
+position = Vector2( 1832, 1000 )
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
