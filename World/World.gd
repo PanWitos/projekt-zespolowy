@@ -13,17 +13,19 @@ func _ready():
 func _LevelChange(code):
 	var nextLevel
 	var player
+	var playerIns
 	var spawn
 	var nextLevelCode
 	var spawnCode
 	
+	
 	nextLevelCode = code.substr(0,4)
 	spawnCode = code[4]
-	print(spawnCode)
 	nextLevel = load("res://World/" + nextLevelCode + ".tscn").instance()
-	add_child(nextLevel)
+	call_deferred("add_child", nextLevel)
 	spawn = nextLevel.get_node(str(spawnCode))
-	nextLevel.add_child(load("res://player/player.tscn").instance())
+	playerIns = load("res://player/player.tscn").instance()
+	nextLevel.add_child(playerIns)
 	player = nextLevel.get_node("player")
 	player.position = spawn.position
 	
