@@ -1,10 +1,72 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=40 format=2]
 
 [ext_resource path="res://assets/player/player.png" type="Texture" id=1]
 [ext_resource path="res://player/player.gd" type="Script" id=2]
+[ext_resource path="res://Hitboxes_and_Hurtboxes/hitbox.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Hitboxes_and_Hurtboxes/hurtbox.tscn" type="PackedScene" id=4]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36, 38 )
+
+[sub_resource type="Animation" id=5]
+resource_name = "Attack"
+length = 0.25
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 32, 33, 34, 35, 36 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SwordHitboxPivot/SwordHitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.25 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "attackPerformed"
+} ]
+}
+
+[sub_resource type="Animation" id=6]
+resource_name = "Fall"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 24, 25 ]
+}
 
 [sub_resource type="Animation" id=2]
 resource_name = "Idle"
@@ -21,6 +83,23 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
 "update": 1,
 "values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=7]
+resource_name = "Jump"
+length = 0.2
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ 16, 17 ]
 }
 
 [sub_resource type="Animation" id=3]
@@ -55,25 +134,152 @@ tracks/0/keys = {
 "values": [ 8, 9, 10, 11, 12, 13, 14, 15 ]
 }
 
+[sub_resource type="AnimationNodeAnimation" id=29]
+animation = "Attack"
+
+[sub_resource type="AnimationNodeAnimation" id=17]
+animation = "Fall"
+
+[sub_resource type="AnimationNodeAnimation" id=14]
+animation = "Idle"
+
+[sub_resource type="AnimationNodeAnimation" id=22]
+animation = "Jump"
+
+[sub_resource type="AnimationNodeAnimation" id=9]
+animation = "Run"
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=15]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=16]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=18]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=19]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=20]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=21]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=23]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=24]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=25]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=26]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=27]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=28]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=30]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=32]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=34]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=37]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=38]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=39]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=40]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=41]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachine" id=12]
+states/Attack/node = SubResource( 29 )
+states/Attack/position = Vector2( 927.808, -43.46 )
+states/Fall/node = SubResource( 17 )
+states/Fall/position = Vector2( 16.2097, 58.54 )
+states/Idle/node = SubResource( 14 )
+states/Idle/position = Vector2( 16.2097, -97.46 )
+states/Jump/node = SubResource( 22 )
+states/Jump/position = Vector2( 374.21, 65.54 )
+states/Run/node = SubResource( 9 )
+states/Run/position = Vector2( 374.21, -97.46 )
+transitions = [ "Idle", "Run", SubResource( 15 ), "Run", "Idle", SubResource( 16 ), "Run", "Fall", SubResource( 18 ), "Idle", "Fall", SubResource( 19 ), "Fall", "Run", SubResource( 20 ), "Fall", "Idle", SubResource( 21 ), "Fall", "Jump", SubResource( 23 ), "Jump", "Fall", SubResource( 24 ), "Run", "Jump", SubResource( 25 ), "Idle", "Jump", SubResource( 26 ), "Jump", "Run", SubResource( 27 ), "Jump", "Idle", SubResource( 28 ), "Run", "Attack", SubResource( 30 ), "Fall", "Attack", SubResource( 32 ), "Jump", "Attack", SubResource( 34 ), "Idle", "Attack", SubResource( 37 ), "Attack", "Idle", SubResource( 38 ), "Attack", "Run", SubResource( 39 ), "Attack", "Jump", SubResource( 40 ), "Attack", "Fall", SubResource( 41 ) ]
+start_node = "Idle"
+graph_offset = Vector2( -147.451, -153.46 )
+
+[sub_resource type="AnimationNodeStateMachinePlayback" id=13]
+
+[sub_resource type="CapsuleShape2D" id=42]
+radius = 40.0
+height = 10.0
+
 [node name="player" type="KinematicBody2D"]
+collision_layer = 2
 collision_mask = 17
 script = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( -3, 9 )
+position = Vector2( 0, 11 )
 shape = SubResource( 1 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 3, 3 )
 texture = ExtResource( 1 )
 hframes = 8
-vframes = 4
+vframes = 5
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Attack = SubResource( 5 )
+anims/Fall = SubResource( 6 )
 anims/Idle = SubResource( 2 )
+anims/Jump = SubResource( 7 )
 anims/RESET = SubResource( 3 )
 anims/Run = SubResource( 4 )
+
+[node name="AnimationTree" type="AnimationTree" parent="."]
+tree_root = SubResource( 12 )
+anim_player = NodePath("../AnimationPlayer")
+active = true
+parameters/playback = SubResource( 13 )
+
+[node name="SwordHitboxPivot" type="Position2D" parent="."]
+position = Vector2( 0, 5 )
+
+[node name="SwordHitbox" parent="SwordHitboxPivot" instance=ExtResource( 3 )]
+position = Vector2( 45, 0 )
+rotation = 1.5708
+collision_layer = 0
+collision_mask = 8
+
+[node name="CollisionShape2D" parent="SwordHitboxPivot/SwordHitbox" index="0"]
+shape = SubResource( 42 )
+disabled = true
+
+[node name="ComboTimer" type="Timer" parent="."]
+
+[node name="AttackCooldownTimer" type="Timer" parent="."]
+
+[node name="DashTimer" type="Timer" parent="."]
+
+[node name="PlayerHurtbox" parent="." instance=ExtResource( 4 )]
+position = Vector2( 1, 15 )
+collision_layer = 4
+collision_mask = 0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerHurtbox"]
+polygon = PoolVector2Array( 15, -33, 22, 0, 17, 31, -22, 30, -27, 0, -18, -19 )
+
+[node name="DiveTimer" type="Timer" parent="."]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2( 0, -250 )
 current = true
+
+[connection signal="timeout" from="ComboTimer" to="." method="_on_ComboTimer_timeout"]
+[connection signal="timeout" from="AttackCooldownTimer" to="." method="_on_AttackCooldownTimer_timeout"]
+[connection signal="timeout" from="DashTimer" to="." method="_on_DashTimer_timeout"]
+[connection signal="area_entered" from="PlayerHurtbox" to="." method="_on_PlayerHurtbox_area_entered"]
+
+[editable path="SwordHitboxPivot/SwordHitbox"]
+[editable path="PlayerHurtbox"]
