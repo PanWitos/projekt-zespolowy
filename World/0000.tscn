@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://assets/locations/TileMapForeground.tscn" type="PackedScene" id=1]
+[ext_resource path="res://squirrel.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/Exit.tscn" type="PackedScene" id=3]
 
 [sub_resource type="GDScript" id=3]
@@ -44,6 +45,9 @@ position = Vector2( 3003, 987 )
 
 [node name="startPoint" type="Position2D" parent="."]
 position = Vector2( 1615, 986 )
+
+[node name="squirrel" parent="." instance=ExtResource( 2 )]
+position = Vector2( 920, 199 )
 
 [editable path="Exit"]
 [editable path="Exit2"]
