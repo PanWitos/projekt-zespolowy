@@ -19,8 +19,9 @@ func _LevelChange(code):
 	var spawnCode
 	
 	
+	
 	nextLevelCode = code.substr(0,4)
-	spawnCode = code[4]
+	spawnCode = code[5]
 	nextLevel = load("res://World/" + nextLevelCode + ".tscn").instance()
 	call_deferred("add_child", nextLevel)
 	spawn = nextLevel.get_node(str(spawnCode))
