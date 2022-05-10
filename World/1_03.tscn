@@ -1,9 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://assets/locations/TileMapForeground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/locations/TileMapBackground.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/locations/GrassLand/Background/GrassLand_Background_Guide1x2.png" type="Texture" id=3]
 
 [node name="1_03" type="Node2D"]
+
+[node name="GrassLandBackgroundGuide1X2" type="Sprite" parent="."]
+position = Vector2( 1138, 1318.5 )
+scale = Vector2( 6.18478, 6.33894 )
+texture = ExtResource( 3 )
 
 [node name="TileMapBackground" parent="." instance=ExtResource( 2 )]
 tile_data = PoolIntArray(  )
