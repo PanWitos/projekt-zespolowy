@@ -93,6 +93,8 @@ func _physics_process(delta):
 			input_vector.x = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")) * MAX_SPEED_H
 			
 			if is_on_floor():
+				acceleration_v = 0
+				velocity_v = 0
 				JUMPS_LEFT = ADDITIONAL_JUMPS
 				if Input.is_action_just_pressed("ui_up"):
 					velocity_v = JUMP_SPEED
@@ -149,8 +151,11 @@ func _physics_process(delta):
 			
 			sprite.flip_h = player_inverted
 			
+			
 			velocity.x = velocity_h
 			velocity.y = velocity_v
+			
+			print(velocity_v)
 	
 			move_and_slide(velocity, Vector2.UP)
 		DASH:
