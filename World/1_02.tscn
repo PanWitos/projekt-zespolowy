@@ -53,5 +53,8 @@ position = Vector2( 1792, 1008 )
 [node name="startPoint" type="Position2D" parent="."]
 position = Vector2( 1792, 992 )
 
+[node name="2" type="Position2D" parent="."]
+position = Vector2( 80, 1008 )
+
 [editable path="Exit1"]
 [editable path="Exit2"]
