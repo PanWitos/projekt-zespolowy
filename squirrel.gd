@@ -29,3 +29,7 @@ func _physics_process(delta):
 	velocity.y=velocity_v
 	move_and_slide(velocity, Vector2.UP)
 
+
+
+func _on_hurtbox_area_entered(area):
+	print("Przeciwnik uderzony")

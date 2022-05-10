@@ -85,5 +85,7 @@ modulate = Color( 0.0666667, 0.466667, 0.760784, 1 )
 position = Vector2( -2, 38 )
 shape = SubResource( 5 )
 
+[connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
+
 [editable path="hitbox"]
 [editable path="hurtbox"]
