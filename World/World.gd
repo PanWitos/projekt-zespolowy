@@ -2,6 +2,8 @@ extends Node
 
 onready var currentLevel = self.get_child(0)
 
+export var playerPos = Vector2.ZERO
+
 func _ready():
 	SignalBus.connect("LevelChange", self, "_LevelChange")
 	
@@ -32,3 +34,7 @@ func _LevelChange(code):
 	
 	currentLevel.queue_free()
 	currentLevel = nextLevel
+	
+func _process(delta):
+	var player = currentLevel.get_node("player")
+	playerPos = player.position
