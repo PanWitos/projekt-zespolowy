@@ -28,6 +28,7 @@ onready var swordHitboxPivot = $SwordHitboxPivot
 onready var combo_timer = $ComboTimer
 onready var attack_cooldown_timer = $AttackCooldownTimer
 onready var dash_timer = $DashTimer
+onready var sword_hitbox_area = $SwordHitboxPivot/SwordHitbox
 
 var velocity_h = 0
 var velocity_v = 0
@@ -140,7 +141,12 @@ func _physics_process(delta):
 				animationState.travel("Jump")
 			
 			if Input.is_action_just_pressed("Attack") and can_attack:
+				if player_inverted:
+					sword_hitbox_area.knockbackVector.x = -1
+				else:
+					sword_hitbox_area.knockbackVector.x = 1
 				animationState.travel("Attack")
+				
 				
 			if Input.is_action_just_pressed("Dash"):
 				state = DASH
