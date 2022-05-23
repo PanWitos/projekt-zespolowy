@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ghoul -basic.png-f916bdbf65d1613cbce2c964194d777a.stex"
+path="res://.import/_WallClimb.png-fe9210ba397795d03d2ee74629b1588e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://opponents/sprites/dungeon/Ghoul -basic.png"
-dest_files=[ "res://.import/Ghoul -basic.png-f916bdbf65d1613cbce2c964194d777a.stex" ]
+source_file="res://opponents/sprites/stronghold/Colour2/Outline/120x80_PNGSheets/_WallClimb.png"
+dest_files=[ "res://.import/_WallClimb.png-fe9210ba397795d03d2ee74629b1588e.stex" ]
 
 [params]
 
