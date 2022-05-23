@@ -4,8 +4,8 @@ const ACCELERATION = 4000
 const MAX_SPEED_H = 500
 const MAX_SPEED_V = 1600
 const FRICTION = 5000
-const GRAVITY = 1300
-const JUMP_SPEED = -1600
+const GRAVITY = 1100
+const JUMP_SPEED = -1800
 const DASH_LEN = 500
 const DASH_TIME = 0.2
 const ATTACK_COOLDOWN = 0.8
@@ -32,7 +32,7 @@ onready var dash_timer = $DashTimer
 var velocity_h = 0
 var velocity_v = 0
 var velocity = Vector2.ZERO
-export var ADDITIONAL_JUMPS = 1
+export var ADDITIONAL_JUMPS = 100
 var JUMPS_LEFT = 0
 var acceleration_v = 0
 var dash_velocity = Vector2(DASH_LEN/DASH_TIME, 0)
@@ -93,8 +93,9 @@ func _physics_process(delta):
 			input_vector.x = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")) * MAX_SPEED_H
 			
 			if is_on_floor():
-				acceleration_v = 0
 				velocity_v = 0
+				acceleration_v = 0
+
 				JUMPS_LEFT = ADDITIONAL_JUMPS
 				if Input.is_action_just_pressed("ui_up"):
 					velocity_v = JUMP_SPEED
@@ -154,9 +155,6 @@ func _physics_process(delta):
 			
 			velocity.x = velocity_h
 			velocity.y = velocity_v
-			
-			print(velocity_v)
-	
 			move_and_slide(velocity, Vector2.UP)
 		DASH:
 			swordHitboxPivot.get_child(0).get_child(0).disabled = true;
