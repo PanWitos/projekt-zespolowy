@@ -22,7 +22,7 @@ position = Vector2( 1792, 1008 )
 
 [node name="Exit" parent="." instance=ExtResource( 2 )]
 position = Vector2( 72, 992 )
-code = "00001"
+code = "1_01_1"
 
 [node name="CollisionShape2D" parent="Exit" index="0"]
 position = Vector2( -5.5, -10 )
@@ -30,7 +30,7 @@ shape = SubResource( 1 )
 
 [node name="Exit2" parent="." instance=ExtResource( 2 )]
 position = Vector2( 1888, 992 )
-code = "00002"
+code = "1_01_2"
 
 [node name="CollisionShape2D" parent="Exit2" index="0"]
 position = Vector2( 14, -8 )

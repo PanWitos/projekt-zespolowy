@@ -4,6 +4,8 @@ onready var currentLevel = self.get_child(0)
 
 export var playerPos = Vector2.ZERO
 
+signal cameraChange
+
 func _ready():
 	SignalBus.connect("LevelChange", self, "_LevelChange")
 	
@@ -31,7 +33,7 @@ func _LevelChange(code):
 	nextLevel.add_child(playerIns)
 	player = nextLevel.get_node("player")
 	player.position = spawn.position
-	
+	emit_signal("cameraChange", nextLevelCode)
 	currentLevel.queue_free()
 	currentLevel = nextLevel
 	
