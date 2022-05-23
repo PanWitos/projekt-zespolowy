@@ -8,3 +8,4 @@ pause_mode = 1
 script = ExtResource( 2 )
 
 [node name="0000" parent="." instance=ExtResource( 1 )]
+position = Vector2( 2, 286 )

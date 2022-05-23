@@ -12,7 +12,12 @@ const MAX_SPEED_V = 1600
 var velocity_v = 0
 var acceleration_v = 0
 var velocity = Vector2.ZERO
+var knockback = Vector2.ZERO
 onready var stats = $Stats
+
+func _ready():
+	print(stats.max_health)
+	print(stats.health)
 
 func numberMoveToward(from, to, delta):
 	
@@ -31,17 +36,23 @@ func numberMoveToward(from, to, delta):
 			return from - delta
 		else:
 			return to
-			
+
 func _physics_process(delta):
 	acceleration_v = numberMoveToward(acceleration_v, MAX_SPEED_V, GRAVITY*delta)
 	velocity_v = numberMoveToward(velocity_v, MAX_SPEED_V, acceleration_v)
 	velocity.y=velocity_v
 	move_and_slide(velocity, Vector2.UP)
+	
+	knockback = knockback.move_toward(Vector2.ZERO, 200 * delta)
+	knockback = move_and_slide(knockback)
 
+func _on_hurtbox_area_entered(area):	
+	stats.health -= area.damage
+	knockback = area.knockback_vector * 120
 
-
-func _on_hurtbox_area_entered(area):
-	print(\"Przeciwnik uderzony\")
+func _on_Stats_no_health():
+	queue_free()
+ 
 "
 
 [sub_resource type="Animation" id=1]
@@ -127,6 +138,7 @@ shape = SubResource( 5 )
 [node name="Stats" parent="." instance=ExtResource( 5 )]
 
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 
 [editable path="hitbox"]
 [editable path="hurtbox"]
