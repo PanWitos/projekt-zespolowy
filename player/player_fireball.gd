@@ -6,6 +6,7 @@ var velocity = Vector2.ZERO
 onready var sprite = $AnimatedSprite
 onready var hitboxPivot = $hitbox_pivot
 onready var hurtboxPivot = $hurtbox_pivot 
+onready var hitbox_area = $hitbox_pivot/hitbox
 export var flipped_h = false
 
 
@@ -15,10 +16,11 @@ func _ready():
 		sprite.flip_v = true
 		hurtboxPivot.rotation_degrees = 180
 		hitboxPivot.rotation_degrees = 180
-		global_position.x -= 100
+		hitbox_area.knockbackVector.x = -1
+		hitbox_area.damage = 20
 	else:
 		velocity.x = SPEED
-		global_position.x += 100
+		hitbox_area.knockbackVector.x = 1
 	
 func _physics_process(delta):
 	move_and_slide(velocity, Vector2.UP)
