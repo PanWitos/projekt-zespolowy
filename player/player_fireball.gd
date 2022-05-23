@@ -29,6 +29,14 @@ func _on_hurtbox_body_entered(body):
 	var playerFireballExplosion = PlayerFireballExplosion.instance()
 	var world = get_tree().current_scene
 	playerFireballExplosion.global_position = global_position
-	playerFireballExplosion
+	world.add_child(playerFireballExplosion)
+	queue_free()
+
+
+func _on_hitbox_area_entered(area):
+	var PlayerFireballExplosion = load("res://player/player_fireball_explosion.tscn") 
+	var playerFireballExplosion = PlayerFireballExplosion.instance()
+	var world = get_tree().current_scene
+	playerFireballExplosion.global_position = global_position
 	world.add_child(playerFireballExplosion)
 	queue_free()

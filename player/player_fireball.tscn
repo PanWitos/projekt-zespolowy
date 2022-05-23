@@ -45,7 +45,7 @@ rotation = 1.5708
 scale = Vector2( 4, 4 )
 frames = SubResource( 5 )
 animation = "shot"
-frame = 3
+frame = 2
 playing = true
 
 [node name="hitbox_pivot" type="Position2D" parent="."]
@@ -69,6 +69,7 @@ position = Vector2( -11, 0 )
 rotation = 1.5708
 shape = SubResource( 7 )
 
+[connection signal="area_entered" from="hitbox_pivot/hitbox" to="." method="_on_hitbox_area_entered"]
 [connection signal="body_entered" from="hurtbox_pivot/hurtbox" to="." method="_on_hurtbox_body_entered"]
 
 [editable path="hitbox_pivot/hitbox"]
