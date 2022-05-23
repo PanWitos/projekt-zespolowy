@@ -153,7 +153,6 @@ func _physics_process(delta):
 			
 			velocity.x = velocity_h
 			velocity.y = velocity_v
-			print(velocity.y)
 			move_and_slide(velocity, Vector2.UP)
 		DASH:
 			swordHitboxPivot.get_child(0).get_child(0).disabled = true;
