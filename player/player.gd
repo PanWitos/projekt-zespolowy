@@ -95,6 +95,7 @@ func _physics_process(delta):
 			if is_on_floor():
 				velocity_v = 0
 				acceleration_v = 0
+
 				JUMPS_LEFT = ADDITIONAL_JUMPS
 				if Input.is_action_just_pressed("ui_up"):
 					velocity_v = JUMP_SPEED
@@ -150,6 +151,7 @@ func _physics_process(delta):
 				animationState.travel("Fall")
 			
 			sprite.flip_h = player_inverted
+			
 			
 			velocity.x = velocity_h
 			velocity.y = velocity_v
