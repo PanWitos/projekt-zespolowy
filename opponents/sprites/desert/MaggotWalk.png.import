@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MaggotWalk.png-f2457b4f1e8192ec43f1565c3f8eb28a.stex"
+path="res://.import/MaggotWalk.png-923b4b275168f45028f7259b6053d3e8.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/desert/MaggotWalk.png"
-dest_files=[ "res://.import/MaggotWalk.png-f2457b4f1e8192ec43f1565c3f8eb28a.stex" ]
+source_file="res://opponents/sprites/desert/MaggotWalk.png"
+dest_files=[ "res://.import/MaggotWalk.png-923b4b275168f45028f7259b6053d3e8.stex" ]
 
 [params]
 

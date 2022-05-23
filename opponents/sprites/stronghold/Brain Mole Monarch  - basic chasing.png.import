@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Brain Mole Monarch  - basic chasing.png-c9f226588656d3fe668f2bacd7c2cb3b.stex"
+path="res://.import/Brain Mole Monarch  - basic chasing.png-a0116e46eb625a1e2193a2f308085537.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/stronghold/Brain Mole Monarch  - basic chasing.png"
-dest_files=[ "res://.import/Brain Mole Monarch  - basic chasing.png-c9f226588656d3fe668f2bacd7c2cb3b.stex" ]
+source_file="res://opponents/sprites/stronghold/Brain Mole Monarch  - basic chasing.png"
+dest_files=[ "res://.import/Brain Mole Monarch  - basic chasing.png-a0116e46eb625a1e2193a2f308085537.stex" ]
 
 [params]
 

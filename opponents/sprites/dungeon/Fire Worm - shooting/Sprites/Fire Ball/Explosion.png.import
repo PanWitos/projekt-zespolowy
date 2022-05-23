@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Explosion.png-0e44b2db2836c4f8909499e68f48dfd2.stex"
+path="res://.import/Explosion.png-0b052166c364f27d87679979288decd3.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/dungeon/Fire Worm - shooting/Sprites/Fire Ball/Explosion.png"
-dest_files=[ "res://.import/Explosion.png-0e44b2db2836c4f8909499e68f48dfd2.stex" ]
+source_file="res://opponents/sprites/dungeon/Fire Worm - shooting/Sprites/Fire Ball/Explosion.png"
+dest_files=[ "res://.import/Explosion.png-0b052166c364f27d87679979288decd3.stex" ]
 
 [params]
 

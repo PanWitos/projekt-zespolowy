@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Leshy Leaf shooting.png-51e081d4bd2ffd2323f20ba2a19750b3.stex"
+path="res://.import/Leshy Leaf shooting.png-bf6505abd4080b460704be14964b2421.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/stronghold/Leshy Leaf shooting.png"
-dest_files=[ "res://.import/Leshy Leaf shooting.png-51e081d4bd2ffd2323f20ba2a19750b3.stex" ]
+source_file="res://opponents/sprites/stronghold/Leshy Leaf shooting.png"
+dest_files=[ "res://.import/Leshy Leaf shooting.png-bf6505abd4080b460704be14964b2421.stex" ]
 
 [params]
 

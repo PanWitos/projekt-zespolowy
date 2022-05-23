@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Squirrel - basic.png-8ad8e403823d98a7df07cc8bba140fdf.stex"
+path="res://.import/Squirrel - basic.png-d18ea1ec61073006d0d3d28e1af10e6c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/grassland/Squirrel - basic.png"
-dest_files=[ "res://.import/Squirrel - basic.png-8ad8e403823d98a7df07cc8bba140fdf.stex" ]
+source_file="res://opponents/sprites/grassland/Squirrel - basic.png"
+dest_files=[ "res://.import/Squirrel - basic.png-d18ea1ec61073006d0d3d28e1af10e6c.stex" ]
 
 [params]
 

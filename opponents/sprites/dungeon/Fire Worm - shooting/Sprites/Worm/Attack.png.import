@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Attack.png-e4046d4b3225c084bf8913fe006dd2b1.stex"
+path="res://.import/Attack.png-66fdf40d49d49e09304d0ff6cc38192f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/dungeon/Fire Worm - shooting/Sprites/Worm/Attack.png"
-dest_files=[ "res://.import/Attack.png-e4046d4b3225c084bf8913fe006dd2b1.stex" ]
+source_file="res://opponents/sprites/dungeon/Fire Worm - shooting/Sprites/Worm/Attack.png"
+dest_files=[ "res://.import/Attack.png-66fdf40d49d49e09304d0ff6cc38192f.stex" ]
 
 [params]
 

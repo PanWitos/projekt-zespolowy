@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fire Elemental basic.png-dbe0d5338ddcdeda9c5e231f3b57f87c.stex"
+path="res://.import/Fire Elemental basic.png-de75bb450f87d766662e2183def8c607.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/lava/Fire Elemental basic.png"
-dest_files=[ "res://.import/Fire Elemental basic.png-dbe0d5338ddcdeda9c5e231f3b57f87c.stex" ]
+source_file="res://opponents/sprites/lava/Fire Elemental basic.png"
+dest_files=[ "res://.import/Fire Elemental basic.png-de75bb450f87d766662e2183def8c607.stex" ]
 
 [params]
 

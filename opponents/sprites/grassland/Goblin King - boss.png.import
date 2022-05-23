@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Goblin King - boss.png-eeb2edb61da715ca991663dd93394ead.stex"
+path="res://.import/Goblin King - boss.png-7c94eefa1d1599a4f559115f37c1a723.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/grassland/Goblin King - boss.png"
-dest_files=[ "res://.import/Goblin King - boss.png-eeb2edb61da715ca991663dd93394ead.stex" ]
+source_file="res://opponents/sprites/grassland/Goblin King - boss.png"
+dest_files=[ "res://.import/Goblin King - boss.png-7c94eefa1d1599a4f559115f37c1a723.stex" ]
 
 [params]
 

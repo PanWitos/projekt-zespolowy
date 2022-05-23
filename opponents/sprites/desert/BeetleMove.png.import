@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BeetleMove.png-ef7551afd97c1793d4915b380f17cbfc.stex"
+path="res://.import/BeetleMove.png-a45e6c2dc50c405427eea23a6a036920.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/desert/BeetleMove.png"
-dest_files=[ "res://.import/BeetleMove.png-ef7551afd97c1793d4915b380f17cbfc.stex" ]
+source_file="res://opponents/sprites/desert/BeetleMove.png"
+dest_files=[ "res://.import/BeetleMove.png-a45e6c2dc50c405427eea23a6a036920.stex" ]
 
 [params]
 

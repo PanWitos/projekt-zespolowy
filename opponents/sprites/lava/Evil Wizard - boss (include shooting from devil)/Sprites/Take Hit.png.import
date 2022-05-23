@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Take Hit.png-05cd2947bdaeabff099afc1182c62dc5.stex"
+path="res://.import/Take Hit.png-ac2c2a425bf55884de84a562e9e7b816.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/lava/Evil Wizard - boss (include shooting from devil)/Sprites/Take Hit.png"
-dest_files=[ "res://.import/Take Hit.png-05cd2947bdaeabff099afc1182c62dc5.stex" ]
+source_file="res://opponents/sprites/lava/Evil Wizard - boss (include shooting from devil)/Sprites/Take Hit.png"
+dest_files=[ "res://.import/Take Hit.png-ac2c2a425bf55884de84a562e9e7b816.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Minotaur - boss.png-e4f469c7757a6a15b15759ccaa47c6f2.stex"
+path="res://.import/Minotaur - boss.png-c5025a3d54740884e8c42ca994038c06.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/dungeon/Minotaur - boss.png"
-dest_files=[ "res://.import/Minotaur - boss.png-e4f469c7757a6a15b15759ccaa47c6f2.stex" ]
+source_file="res://opponents/sprites/dungeon/Minotaur - boss.png"
+dest_files=[ "res://.import/Minotaur - boss.png-c5025a3d54740884e8c42ca994038c06.stex" ]
 
 [params]
 

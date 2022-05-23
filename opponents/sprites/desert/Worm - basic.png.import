@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Worm - basic.png-360ffd96c6ffe344e80262d69bbd0454.stex"
+path="res://.import/Worm - basic.png-50fa92fd1160d0c2d57a6252699fc570.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/desert/Worm - basic.png"
-dest_files=[ "res://.import/Worm - basic.png-360ffd96c6ffe344e80262d69bbd0454.stex" ]
+source_file="res://opponents/sprites/desert/Worm - basic.png"
+dest_files=[ "res://.import/Worm - basic.png-50fa92fd1160d0c2d57a6252699fc570.stex" ]
 
 [params]
 

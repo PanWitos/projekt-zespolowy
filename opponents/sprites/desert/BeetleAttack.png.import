@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/BeetleAttack.png-a0b73d94003c9a8e5908effb5acaaab9.stex"
+path="res://.import/BeetleAttack.png-ee8e65011b7f821f47856814edd08ccb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/desert/BeetleAttack.png"
-dest_files=[ "res://.import/BeetleAttack.png-a0b73d94003c9a8e5908effb5acaaab9.stex" ]
+source_file="res://opponents/sprites/desert/BeetleAttack.png"
+dest_files=[ "res://.import/BeetleAttack.png-ee8e65011b7f821f47856814edd08ccb.stex" ]
 
 [params]
 

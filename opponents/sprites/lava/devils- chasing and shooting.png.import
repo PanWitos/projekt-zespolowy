@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/devils- chasing and shooting.png-9ff3bcd895146acf189223af3006c245.stex"
+path="res://.import/devils- chasing and shooting.png-5710756d2f8d15fdc4689125bbeb8934.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/lava/devils- chasing and shooting.png"
-dest_files=[ "res://.import/devils- chasing and shooting.png-9ff3bcd895146acf189223af3006c245.stex" ]
+source_file="res://opponents/sprites/lava/devils- chasing and shooting.png"
+dest_files=[ "res://.import/devils- chasing and shooting.png-5710756d2f8d15fdc4689125bbeb8934.stex" ]
 
 [params]
 

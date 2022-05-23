@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hedgehog  - basic.png-4f402dba29c02767d3e178cad12f4a84.stex"
+path="res://.import/Hedgehog  - basic.png-4bd425a48f2495ce297bc44db019199a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/grassland/Hedgehog  - basic.png"
-dest_files=[ "res://.import/Hedgehog  - basic.png-4f402dba29c02767d3e178cad12f4a84.stex" ]
+source_file="res://opponents/sprites/grassland/Hedgehog  - basic.png"
+dest_files=[ "res://.import/Hedgehog  - basic.png-4bd425a48f2495ce297bc44db019199a.stex" ]
 
 [params]
 

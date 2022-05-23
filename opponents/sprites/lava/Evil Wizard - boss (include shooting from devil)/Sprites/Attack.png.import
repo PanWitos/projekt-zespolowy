@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Attack.png-518cdea0923e956641dd313c52fa84a5.stex"
+path="res://.import/Attack.png-13c844aac1f6279c5345ff9c7dd4a032.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/lava/Evil Wizard - boss (include shooting from devil)/Sprites/Attack.png"
-dest_files=[ "res://.import/Attack.png-518cdea0923e956641dd313c52fa84a5.stex" ]
+source_file="res://opponents/sprites/lava/Evil Wizard - boss (include shooting from devil)/Sprites/Attack.png"
+dest_files=[ "res://.import/Attack.png-13c844aac1f6279c5345ff9c7dd4a032.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Ghoul -basic.png-c50b7138b3dbd1df658236ab4e6e76fa.stex"
+path="res://.import/Ghoul -basic.png-f916bdbf65d1613cbce2c964194d777a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/dungeon/Ghoul -basic.png"
-dest_files=[ "res://.import/Ghoul -basic.png-c50b7138b3dbd1df658236ab4e6e76fa.stex" ]
+source_file="res://opponents/sprites/dungeon/Ghoul -basic.png"
+dest_files=[ "res://.import/Ghoul -basic.png-f916bdbf65d1613cbce2c964194d777a.stex" ]
 
 [params]
 

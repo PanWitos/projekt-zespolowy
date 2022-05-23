@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bee_spritesheet - flying and shooting and chasing.png-6a3fc9d8a6d5f4a07953c8138e770bce.stex"
+path="res://.import/bee_spritesheet - flying and shooting and chasing.png-6942c9b72066f335f0f5818ea462f16f.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/winterland/bee_spritesheet - flying and shooting and chasing.png"
-dest_files=[ "res://.import/bee_spritesheet - flying and shooting and chasing.png-6a3fc9d8a6d5f4a07953c8138e770bce.stex" ]
+source_file="res://opponents/sprites/winterland/bee_spritesheet - flying and shooting and chasing.png"
+dest_files=[ "res://.import/bee_spritesheet - flying and shooting and chasing.png-6942c9b72066f335f0f5818ea462f16f.stex" ]
 
 [params]
 

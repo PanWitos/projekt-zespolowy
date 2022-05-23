@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Idle.png-16697db59eb084aeee8c9f8e0e3ec575.stex"
+path="res://.import/Idle.png-34058b3a9632122e8446f46437687bad.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://sprites/lava/Evil Wizard - boss (include shooting from devil)/Sprites/Idle.png"
-dest_files=[ "res://.import/Idle.png-16697db59eb084aeee8c9f8e0e3ec575.stex" ]
+source_file="res://opponents/sprites/lava/Evil Wizard - boss (include shooting from devil)/Sprites/Idle.png"
+dest_files=[ "res://.import/Idle.png-34058b3a9632122e8446f46437687bad.stex" ]
 
 [params]
 

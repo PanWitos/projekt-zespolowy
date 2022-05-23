@@ -5,11 +5,13 @@ var velocity_v = 0
 var acceleration_v = 0
 var velocity = Vector2.ZERO
 onready var stats = $Stats
+func _ready():
+	print (stats.max_health)
+	print (stats.health)
 
 func numberMoveToward(from, to, delta):
 	
 	delta = abs(delta)
-	
 	if from == to:
 		return to
 	
