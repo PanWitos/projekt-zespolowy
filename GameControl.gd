@@ -27,4 +27,5 @@ func _on_Resume_pressed():
 
 func _on_World_cameraChange(name):
 	minimap.changeCameraPos(name)
+	minimap.liftMask(name)
 	

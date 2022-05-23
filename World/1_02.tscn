@@ -22,7 +22,7 @@ position = Vector2( 1792, 1008 )
 
 [node name="Exit" parent="." instance=ExtResource( 2 )]
 position = Vector2( 72, 992 )
-code = "1_01_1"
+code = "1_03_1"
 
 [node name="CollisionShape2D" parent="Exit" index="0"]
 position = Vector2( -5.5, -10 )
