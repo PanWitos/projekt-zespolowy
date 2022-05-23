@@ -149,7 +149,15 @@ func _physics_process(delta):
 			if Input.is_action_just_pressed("Dive") and !is_on_floor():
 				state = DIVE
 				animationState.travel("Fall")
-			
+				
+			if Input.is_action_just_pressed("Cast"):
+				var PlayerFireball = load("res://player/player_fireball.tscn") 
+				var playerFireball = PlayerFireball.instance()
+				var world = get_tree().current_scene
+				playerFireball.global_position = global_position
+				playerFireball.flipped_h = player_inverted
+				world.add_child(playerFireball)
+				
 			sprite.flip_h = player_inverted
 			
 			
