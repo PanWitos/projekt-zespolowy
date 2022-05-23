@@ -270,7 +270,7 @@ collision_layer = 4
 collision_mask = 0
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="PlayerHurtbox"]
-polygon = PoolVector2Array( 15, -33, 22, 0, 17, 31, -22, 30, -27, 0, -18, -19 )
+polygon = PoolVector2Array( 15, -29, 22, 0, 17, 31, -22, 30, -27, 0, -18, -28 )
 
 [node name="DiveTimer" type="Timer" parent="."]
 

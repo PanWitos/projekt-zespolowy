@@ -1,0 +1,21 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[node name="CenterContainer" type="CenterContainer"]
+margin_right = 133.0
+margin_bottom = 700.0
+rect_pivot_offset = Vector2( -1178, -90 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 34.0
+margin_top = 318.0
+margin_right = 98.0
+margin_bottom = 382.0
+rect_min_size = Vector2( 64, 64 )
+texture = ExtResource( 1 )
