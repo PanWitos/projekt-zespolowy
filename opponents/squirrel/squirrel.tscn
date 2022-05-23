@@ -91,7 +91,6 @@ tracks/1/keys = {
 [sub_resource type="Animation" id=11]
 resource_name = "GotHit"
 length = 0.4
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -108,7 +107,6 @@ tracks/0/keys = {
 [sub_resource type="Animation" id=12]
 resource_name = "GotHitLeft"
 length = 0.4
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
