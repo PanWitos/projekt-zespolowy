@@ -7,15 +7,12 @@
 
 [sub_resource type="GDScript" id=6]
 script/source = "extends KinematicBody2D
-const DeathEffect = preload(\"res://VFX/SquirrelDeathEffect.tscn\")
 const GRAVITY = 1300
 const MAX_SPEED_V = 1600
 var velocity_v = 0
 var acceleration_v = 0
 var velocity = Vector2.ZERO
-var knockback = Vector2.ZERO
 onready var stats = $Stats
-
 
 func numberMoveToward(from, to, delta):
 	
@@ -34,30 +31,17 @@ func numberMoveToward(from, to, delta):
 			return from - delta
 		else:
 			return to
-
+			
 func _physics_process(delta):
-	knockback = knockback.move_toward(Vector2.ZERO, 200 * delta)
-	knockback = move_and_slide(knockback)
-	
 	acceleration_v = numberMoveToward(acceleration_v, MAX_SPEED_V, GRAVITY*delta)
 	velocity_v = numberMoveToward(velocity_v, MAX_SPEED_V, acceleration_v)
 	velocity.y=velocity_v
 	move_and_slide(velocity, Vector2.UP)
-	
-func create_death_effect():
-	var deathEffect = DeathEffect.instance()
-	var world = get_tree().current_scene
-	world.add_child(deathEffect)
-	deathEffect.global_position = global_position
-	
-func _on_hurtbox_area_entered(area):	
-	stats.health -= area.damage
-	knockback = area.knockbackVector * 120
 
-func _on_Stats_no_health():
-	create_death_effect()
-	queue_free()
- 
+
+
+func _on_hurtbox_area_entered(area):
+	print(\"Przeciwnik uderzony\")
 "
 
 [sub_resource type="Animation" id=9]
@@ -107,7 +91,6 @@ tracks/1/keys = {
 [sub_resource type="Animation" id=11]
 resource_name = "GotHit"
 length = 0.4
-loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -162,6 +145,18 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:flip_h")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ false ]
 }
 
 [sub_resource type="Animation" id=7]
@@ -244,7 +239,6 @@ script = SubResource( 6 )
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 4, 4 )
 texture = ExtResource( 2 )
-flip_h = true
 hframes = 8
 vframes = 7
 
@@ -283,10 +277,8 @@ position = Vector2( -2, 38 )
 shape = SubResource( 5 )
 
 [node name="Stats" parent="." instance=ExtResource( 5 )]
-max_health = 15
 
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
-[connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 
 [editable path="hitbox"]
 [editable path="hurtbox"]
