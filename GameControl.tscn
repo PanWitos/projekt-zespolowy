@@ -12,6 +12,8 @@ script = ExtResource( 2 )
 
 [node name="PauseMenu" parent="." instance=ExtResource( 3 )]
 visible = false
+margin_left = 40.0
+margin_top = 60.0
 mouse_filter = 2
 
 [node name="Viewport" parent="PauseMenu/Panel/ViewportContainer" index="0"]

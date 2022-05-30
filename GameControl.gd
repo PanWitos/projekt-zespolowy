@@ -22,8 +22,7 @@ func _on_Quit_pressed():
 func _on_Resume_pressed():
 	get_tree().paused = false
 	menu.visible = false
-
-
+	
 
 func _on_World_cameraChange(name):
 	minimap.changeCameraPos(name)

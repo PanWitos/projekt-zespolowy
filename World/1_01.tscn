@@ -9,7 +9,7 @@
 extents = Vector2( 10.5, 528 )
 
 [node name="1_01" type="Node2D"]
-position = Vector2( 144, 48 )
+position = Vector2( 80, -16 )
 
 [node name="GrassLandBackgroundGuide" type="Sprite" parent="."]
 position = Vector2( 976, 664 )
