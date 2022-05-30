@@ -1,0 +1,37 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://MainMenu.gd" type="Script" id=1]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -680.0
+margin_top = -456.0
+margin_right = 2984.0
+margin_bottom = 1616.0
+color = Color( 0.00392157, 0, 0.262745, 1 )
+
+[node name="Start" type="Button" parent="."]
+margin_left = 792.0
+margin_top = 96.0
+margin_right = 1136.0
+margin_bottom = 320.0
+text = "Start Game"
+
+[node name="Load" type="Button" parent="."]
+margin_left = 792.0
+margin_top = 416.0
+margin_right = 1136.0
+margin_bottom = 640.0
+text = "Load Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="Start" to="." method="_on_Button_pressed"]
