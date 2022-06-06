@@ -55,9 +55,9 @@ __meta__ = {
 }
 
 [node name="\?\?" type="TextureRect" parent="Mask"]
-margin_left = 2130.0
+margin_left = 2140.0
 margin_top = 1440.0
-margin_right = 2152.0
+margin_right = 2161.0
 margin_bottom = 1464.0
 rect_scale = Vector2( 9, 9 )
 texture = ExtResource( 3 )

@@ -8,6 +8,7 @@
 
 [sub_resource type="GDScript" id=6]
 script/source = "extends KinematicBody2D
+const DeathEffect = preload(\"res://VFX/SquirrelDeathEffect.tscn\")
 const GRAVITY = 1300
 const MAX_SPEED_V = 1600
 const MAX_SPEED_X = 150
@@ -16,6 +17,7 @@ var acceleration_v = 0
 var velocity = Vector2.ZERO
 var knockback = Vector2.ZERO
 var is_moving_left = true
+
 onready var stats = $Stats
 
 func numberMoveToward(from, to, delta):
@@ -318,6 +320,7 @@ position = Vector2( -43, 23 )
 enabled = true
 
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 
 [editable path="hitbox"]
 [editable path="hurtbox"]
