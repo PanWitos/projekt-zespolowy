@@ -35,6 +35,6 @@ position = Vector2( -140, -160 )
 shape = SubResource( 1 )
 
 [node name="1" type="Position2D" parent="."]
-position = Vector2( 112, 1072 )
+position = Vector2( 144, 1072 )
 
 [editable path="Exit1"]
