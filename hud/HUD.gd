@@ -2,7 +2,7 @@ extends Control
 
 var bar : float = 100
 
-onready var barFull = $barFull
+onready var barFull = $Control/barFull
 
 func _ready():
 	PlayerStats.connect("health_changed",self,"set_bar")

@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://hud/HUD.gd" type="Script" id=1]
-[ext_resource path="res://hud/bar.png" type="Texture" id=2]
+[ext_resource path="res://hud/healthEmpty.png" type="Texture" id=2]
 [ext_resource path="res://hud/bar2.png" type="Texture" id=3]
+[ext_resource path="res://hud/border.png" type="Texture" id=4]
+[ext_resource path="res://Minimap.tscn" type="PackedScene" id=5]
 
 [node name="HUD" type="Control"]
 margin_right = 40.0
@@ -12,11 +14,58 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="barFull" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 1591.0
+margin_top = 35.0
+margin_right = 1847.0
+margin_bottom = 291.0
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ViewportContainer" type="ViewportContainer" parent="TextureRect"]
+margin_left = 36.0
+margin_top = 36.0
+margin_right = 220.0
+margin_bottom = 220.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Viewport" type="Viewport" parent="TextureRect/ViewportContainer"]
+size = Vector2( 184, 184 )
+handle_input_locally = false
+render_target_update_mode = 3
+gui_disable_input = true
+
+[node name="Minimap" parent="TextureRect/ViewportContainer/Viewport" instance=ExtResource( 5 )]
+
+[node name="Control" type="Control" parent="."]
+margin_left = 47.0
+margin_top = 44.0
+margin_right = 87.0
+margin_bottom = 84.0
+rect_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+margin_left = 102.0
+margin_top = 80.0
+margin_right = 510.0
+margin_bottom = 154.0
+color = Color( 0.188235, 0.203922, 0.298039, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="barFull" type="TextureRect" parent="Control"]
 margin_left = 105.0
-margin_top = 88.0
+margin_top = 80.0
 margin_right = 305.0
-margin_bottom = 113.0
+margin_bottom = 116.0
 rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 expand = true
@@ -24,14 +73,17 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="BarEmpty" type="TextureRect" parent="."]
-margin_left = 56.0
-margin_top = 38.0
+[node name="BarEmpty" type="TextureRect" parent="Control"]
+margin_left = 70.0
+margin_top = 46.0
 margin_right = 305.0
-margin_bottom = 113.0
+margin_bottom = 117.0
 rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
 expand = true
+stretch_mode = 5
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[editable path="TextureRect/ViewportContainer/Viewport/Minimap"]
