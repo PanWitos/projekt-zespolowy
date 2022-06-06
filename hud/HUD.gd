@@ -1,6 +1,6 @@
 extends Control
 
-var bar = 100
+var bar : float = 100
 
 onready var barFull = $barFull
 
@@ -12,5 +12,5 @@ func set_bar(value):
 	print("eo")
 	bar = value
 	if barFull != null:
-		barFull.rect_size.x = barFull.rect_size.x * (value/100)
+		barFull.rect_size.x = 2*bar 
 	

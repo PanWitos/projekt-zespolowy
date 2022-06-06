@@ -15,8 +15,8 @@ __meta__ = {
 [node name="barFull" type="TextureRect" parent="."]
 margin_left = 105.0
 margin_top = 88.0
-margin_right = 233.0
-margin_bottom = 104.0
+margin_right = 305.0
+margin_bottom = 113.0
 rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 3 )
 expand = true
@@ -25,12 +25,13 @@ __meta__ = {
 }
 
 [node name="BarEmpty" type="TextureRect" parent="."]
-margin_left = 73.0
-margin_top = 56.0
-margin_right = 233.0
-margin_bottom = 104.0
+margin_left = 56.0
+margin_top = 38.0
+margin_right = 305.0
+margin_bottom = 113.0
 rect_scale = Vector2( 2, 2 )
 texture = ExtResource( 2 )
+expand = true
 __meta__ = {
 "_edit_use_anchors_": false
 }
