@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://assets/locations/Stronghold/Background/Stronghold_Background_2.png" type="Texture" id=1]
+[ext_resource path="res://assets/locations/Stronghold/Background/Stronghold_Background_1.png" type="Texture" id=2]
+
+[node name="StrongholdBackground1x1" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Ściany" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.4, 1 )
+motion_mirroring = Vector2( 2144, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Ściany"]
+position = Vector2( 1072, 548 )
+scale = Vector2( 4.62069, 5.26923 )
+texture = ExtResource( 2 )
+
+[node name="Zbroje" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2( 2256, 0 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Zbroje"]
+position = Vector2( 1131, 712 )
+scale = Vector2( 3.625, 3.77885 )
+texture = ExtResource( 1 )
