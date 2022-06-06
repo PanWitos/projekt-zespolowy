@@ -15,13 +15,13 @@ func _ready():
 	player.position = start.position
 
 func _LevelChange(code):
+	
 	var nextLevel
 	var player
 	var playerIns
 	var spawn
 	var nextLevelCode
 	var spawnCode
-	
 	
 	
 	nextLevelCode = code.substr(0,4)
