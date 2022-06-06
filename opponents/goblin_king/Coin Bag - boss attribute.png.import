@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Coin Bag - boss attribute.png-c04e8be78bd4995b2cc37f8dbcffa59d.stex"
+path="res://.import/Coin Bag - boss attribute.png-855dee429b79d770483c60a3a2da220a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://opponents/sprites/grassland/Coin Bag - boss attribute.png"
-dest_files=[ "res://.import/Coin Bag - boss attribute.png-c04e8be78bd4995b2cc37f8dbcffa59d.stex" ]
+source_file="res://opponents/goblin_king/Coin Bag - boss attribute.png"
+dest_files=[ "res://.import/Coin Bag - boss attribute.png-855dee429b79d770483c60a3a2da220a.stex" ]
 
 [params]
 
