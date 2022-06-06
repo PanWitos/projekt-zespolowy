@@ -1,5 +1,6 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
+[ext_resource path="res://opponents/squirrel/WanderController.tscn" type="PackedScene" id=1]
 [ext_resource path="res://opponents/squirrel/Squirrel Sprite Sheet.png" type="Texture" id=2]
 [ext_resource path="res://Hitboxes_and_Hurtboxes/hurtbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Hitboxes_and_Hurtboxes/hitbox.tscn" type="PackedScene" id=4]
@@ -10,10 +11,12 @@ script/source = "extends KinematicBody2D
 const DeathEffect = preload(\"res://VFX/SquirrelDeathEffect.tscn\")
 const GRAVITY = 1300
 const MAX_SPEED_V = 1600
+const MAX_SPEED_X = 150
 var velocity_v = 0
 var acceleration_v = 0
 var velocity = Vector2.ZERO
 var knockback = Vector2.ZERO
+var is_moving_left = true
 onready var stats = $Stats
 
 
@@ -36,13 +39,18 @@ func numberMoveToward(from, to, delta):
 			return to
 
 func _physics_process(delta):
+	$AnimationPlayer.play(\"RunLeft\")
+	
 	knockback = knockback.move_toward(Vector2.ZERO, 200 * delta)
 	knockback = move_and_slide(knockback)
 	
 	acceleration_v = numberMoveToward(acceleration_v, MAX_SPEED_V, GRAVITY*delta)
 	velocity_v = numberMoveToward(velocity_v, MAX_SPEED_V, acceleration_v)
 	velocity.y=velocity_v
+	velocity.x= -MAX_SPEED_X if is_moving_left else MAX_SPEED_X
 	move_and_slide(velocity, Vector2.UP)
+	
+	detect_turn_around()
 	
 func create_death_effect():
 	var deathEffect = DeathEffect.instance()
@@ -58,6 +66,12 @@ func _on_Stats_no_health():
 	create_death_effect()
 	queue_free()
  
+func detect_turn_around():
+	if ($RayCastInfront.is_colliding() and is_on_floor()) or (not $RayCastFloor.is_colliding() and is_on_floor()):
+		is_moving_left = !is_moving_left
+		scale.x = -scale.x
+		print(\"obrot\")
+		
 "
 
 [sub_resource type="Animation" id=9]
@@ -284,6 +298,17 @@ shape = SubResource( 5 )
 
 [node name="Stats" parent="." instance=ExtResource( 5 )]
 max_health = 15
+
+[node name="WanderController" parent="." instance=ExtResource( 1 )]
+
+[node name="RayCastInfront" type="RayCast2D" parent="."]
+position = Vector2( -19, 22 )
+rotation = 1.5708
+enabled = true
+
+[node name="RayCastFloor" type="RayCast2D" parent="."]
+position = Vector2( -43, 23 )
+enabled = true
 
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
