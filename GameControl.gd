@@ -1,7 +1,7 @@
 extends Node
 
-onready var menu = $PauseMenu
-onready var minimap = $PauseMenu/Panel/ViewportContainer/Viewport/Minimap
+onready var menu = $CanvasLayer/PauseMenu
+onready var minimap = $CanvasLayer/PauseMenu/Panel/ViewportContainer/Viewport/Minimap
 onready var world = $World
 
 func _process(delta):
@@ -12,7 +12,6 @@ func _process(delta):
 		elif get_tree().paused == false:
 			get_tree().paused = true
 			menu.visible = true
-			menu.rect_position = world.playerPos + Vector2(-960,-790)
 
 
 func _on_Quit_pressed():

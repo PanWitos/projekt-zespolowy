@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://hud/HUD.gd" type="Script" id=1]
+[ext_resource path="res://hud/bar.png" type="Texture" id=2]
+[ext_resource path="res://hud/bar2.png" type="Texture" id=3]
+
+[node name="HUD" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="barFull" type="TextureRect" parent="."]
+margin_left = 105.0
+margin_top = 88.0
+margin_right = 233.0
+margin_bottom = 104.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BarEmpty" type="TextureRect" parent="."]
+margin_left = 73.0
+margin_top = 56.0
+margin_right = 233.0
+margin_bottom = 104.0
+rect_scale = Vector2( 2, 2 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
