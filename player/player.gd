@@ -30,6 +30,7 @@ onready var attack_cooldown_timer = $AttackCooldownTimer
 onready var dash_timer = $DashTimer
 onready var sword_hitbox_area = $SwordHitboxPivot/SwordHitbox
 onready var playerStats = $player_stats
+onready var camera = $Camera2D
 
 var velocity_h = 0
 var velocity_v = 0
@@ -81,6 +82,25 @@ func attackPerformed():
 	attacks_performed += 1
 	if attacks_performed >= playerStats.maxCombo:
 		can_attack = false
+		
+func _process(delta):
+	var id = get_parent().id
+	match id:
+		0:
+			camera.limit_right = 2256
+			camera.limit_bottom = 1528
+		1:
+			camera.limit_right = 4512
+			camera.limit_bottom = 1528
+		2:
+			camera.limit_right = 2256
+			camera.limit_bottom = 2840
+		3:
+			camera.limit_right = 4512
+			camera.limit_bottom = 2840
+		4:
+			camera.limit_right = 2256
+			camera.limit_bottom = 1528
 	
 func _physics_process(delta):
 	

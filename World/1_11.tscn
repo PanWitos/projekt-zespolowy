@@ -1,7 +1,8 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://assets/locations/TileMapForeground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Exit.tscn" type="PackedScene" id=2]
+[ext_resource path="res://World/ID.gd" type="Script" id=3]
 [ext_resource path="res://assets/locations/TileMapBackground.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/locations/GrassLand/Background/ParallaxBackground1x1.tscn" type="PackedScene" id=5]
 
@@ -12,6 +13,7 @@ extents = Vector2( 12, 528 )
 extents = Vector2( 8.5, 196 )
 
 [node name="1_11" type="Node2D"]
+script = ExtResource( 3 )
 
 [node name="ParallaxBackground1x1" parent="." instance=ExtResource( 5 )]
 

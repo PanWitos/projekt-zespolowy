@@ -347,6 +347,10 @@ polygon = PoolVector2Array( 15, -29, 22, 0, 17, 31, -22, 30, -27, 0, -18, -28 )
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2( 0, -250 )
 current = true
+limit_left = 0
+limit_top = 248
+limit_right = 2256
+limit_bottom = 1528
 
 [node name="player_stats" parent="." instance=ExtResource( 6 )]
 maxCombo = 3
