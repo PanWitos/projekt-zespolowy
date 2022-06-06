@@ -1,9 +1,11 @@
-[gd_scene load_steps=40 format=2]
+[gd_scene load_steps=52 format=2]
 
 [ext_resource path="res://assets/player/player.png" type="Texture" id=1]
 [ext_resource path="res://player/player.gd" type="Script" id=2]
 [ext_resource path="res://Hitboxes_and_Hurtboxes/hitbox.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Hitboxes_and_Hurtboxes/hurtbox.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Hitboxes_and_Hurtboxes/hitbox.gd" type="Script" id=5]
+[ext_resource path="res://player/player_stats.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 36, 38 )
@@ -44,6 +46,49 @@ tracks/2/imported = false
 tracks/2/enabled = true
 tracks/2/keys = {
 "times": PoolRealArray( 0.25 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "attackPerformed"
+} ]
+}
+
+[sub_resource type="Animation" id=53]
+resource_name = "Attack_2"
+length = 0.3
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 40, 41, 42, 43, 44, 45 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("SwordHitboxPivot/SwordHitbox/CollisionShape2D:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.1, 0.25 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 1,
+"values": [ true, false, true ]
+}
+tracks/2/type = "method"
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0.3 ),
 "transitions": PoolRealArray( 1 ),
 "values": [ {
 "args": [  ],
@@ -137,6 +182,9 @@ tracks/0/keys = {
 [sub_resource type="AnimationNodeAnimation" id=29]
 animation = "Attack"
 
+[sub_resource type="AnimationNodeAnimation" id=54]
+animation = "Attack_2"
+
 [sub_resource type="AnimationNodeAnimation" id=17]
 animation = "Fall"
 
@@ -193,9 +241,31 @@ switch_mode = 2
 [sub_resource type="AnimationNodeStateMachineTransition" id=41]
 switch_mode = 2
 
+[sub_resource type="AnimationNodeStateMachineTransition" id=55]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=56]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=57]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=58]
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=59]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=60]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=61]
+switch_mode = 2
+
+[sub_resource type="AnimationNodeStateMachineTransition" id=62]
+switch_mode = 2
+
 [sub_resource type="AnimationNodeStateMachine" id=12]
 states/Attack/node = SubResource( 29 )
-states/Attack/position = Vector2( 927.808, -43.46 )
+states/Attack/position = Vector2( 918.808, -29.46 )
+states/Attack_2/node = SubResource( 54 )
+states/Attack_2/position = Vector2( 918.808, 50.341 )
 states/Fall/node = SubResource( 17 )
 states/Fall/position = Vector2( 16.2097, 58.54 )
 states/Idle/node = SubResource( 14 )
@@ -203,10 +273,10 @@ states/Idle/position = Vector2( 16.2097, -97.46 )
 states/Jump/node = SubResource( 22 )
 states/Jump/position = Vector2( 374.21, 65.54 )
 states/Run/node = SubResource( 9 )
-states/Run/position = Vector2( 374.21, -97.46 )
-transitions = [ "Idle", "Run", SubResource( 15 ), "Run", "Idle", SubResource( 16 ), "Run", "Fall", SubResource( 18 ), "Idle", "Fall", SubResource( 19 ), "Fall", "Run", SubResource( 20 ), "Fall", "Idle", SubResource( 21 ), "Fall", "Jump", SubResource( 23 ), "Jump", "Fall", SubResource( 24 ), "Run", "Jump", SubResource( 25 ), "Idle", "Jump", SubResource( 26 ), "Jump", "Run", SubResource( 27 ), "Jump", "Idle", SubResource( 28 ), "Run", "Attack", SubResource( 30 ), "Fall", "Attack", SubResource( 32 ), "Jump", "Attack", SubResource( 34 ), "Idle", "Attack", SubResource( 37 ), "Attack", "Idle", SubResource( 38 ), "Attack", "Run", SubResource( 39 ), "Attack", "Jump", SubResource( 40 ), "Attack", "Fall", SubResource( 41 ) ]
+states/Run/position = Vector2( 466.21, -71.46 )
+transitions = [ "Idle", "Run", SubResource( 15 ), "Run", "Idle", SubResource( 16 ), "Run", "Fall", SubResource( 18 ), "Idle", "Fall", SubResource( 19 ), "Fall", "Run", SubResource( 20 ), "Fall", "Idle", SubResource( 21 ), "Fall", "Jump", SubResource( 23 ), "Jump", "Fall", SubResource( 24 ), "Run", "Jump", SubResource( 25 ), "Idle", "Jump", SubResource( 26 ), "Jump", "Run", SubResource( 27 ), "Jump", "Idle", SubResource( 28 ), "Run", "Attack", SubResource( 30 ), "Fall", "Attack", SubResource( 32 ), "Jump", "Attack", SubResource( 34 ), "Idle", "Attack", SubResource( 37 ), "Attack", "Idle", SubResource( 38 ), "Attack", "Run", SubResource( 39 ), "Attack", "Jump", SubResource( 40 ), "Attack", "Fall", SubResource( 41 ), "Run", "Attack_2", SubResource( 55 ), "Idle", "Attack_2", SubResource( 56 ), "Jump", "Attack_2", SubResource( 57 ), "Fall", "Attack_2", SubResource( 58 ), "Attack_2", "Run", SubResource( 59 ), "Attack_2", "Jump", SubResource( 60 ), "Attack_2", "Fall", SubResource( 61 ), "Attack_2", "Idle", SubResource( 62 ) ]
 start_node = "Idle"
-graph_offset = Vector2( -147.451, -153.46 )
+graph_offset = Vector2( -68.451, -120.659 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=13]
 
@@ -227,10 +297,11 @@ shape = SubResource( 1 )
 scale = Vector2( 3, 3 )
 texture = ExtResource( 1 )
 hframes = 8
-vframes = 5
+vframes = 6
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/Attack = SubResource( 5 )
+anims/Attack_2 = SubResource( 53 )
 anims/Fall = SubResource( 6 )
 anims/Idle = SubResource( 2 )
 anims/Jump = SubResource( 7 )
@@ -251,6 +322,7 @@ position = Vector2( 45, 0 )
 rotation = 1.5708
 collision_layer = 0
 collision_mask = 8
+script = ExtResource( 5 )
 
 [node name="CollisionShape2D" parent="SwordHitboxPivot/SwordHitbox" index="0"]
 shape = SubResource( 42 )
@@ -275,6 +347,10 @@ polygon = PoolVector2Array( 15, -29, 22, 0, 17, 31, -22, 30, -27, 0, -18, -28 )
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2( 0, -250 )
 current = true
+
+[node name="player_stats" parent="." instance=ExtResource( 6 )]
+maxCombo = 3
+additionalJumps = 3
 
 [connection signal="timeout" from="ComboTimer" to="." method="_on_ComboTimer_timeout"]
 [connection signal="timeout" from="AttackCooldownTimer" to="." method="_on_AttackCooldownTimer_timeout"]

@@ -1,0 +1,1203 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Map.png" type="Texture" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://mask.png" type="Texture" id=3]
+[ext_resource path="res://Minimap.gd" type="Script" id=5]
+
+[node name="Minimap" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+rect_scale = Vector2( 10, 10 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MapCamera" type="Camera2D" parent="."]
+light_mask = 2
+position = Vector2( 2275, 1365 )
+current = true
+zoom = Vector2( 0.6, 0.6 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TextureRect" type="TextureRect" parent="MapCamera"]
+margin_left = -8.0
+margin_top = -8.0
+margin_right = 56.0
+margin_bottom = 56.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Mask" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="\?\?" type="TextureRect" parent="Mask"]
+margin_left = 2130.0
+margin_top = 1440.0
+margin_right = 2152.0
+margin_bottom = 1464.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="\?\?4" type="TextureRect" parent="Mask"]
+margin_left = 1960.0
+margin_top = 1600.0
+margin_right = 1982.0
+margin_bottom = 1606.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="\?\?2" type="TextureRect" parent="Mask"]
+margin_left = 2230.0
+margin_top = 360.0
+margin_right = 2250.0
+margin_bottom = 467.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="\?\?5" type="TextureRect" parent="Mask"]
+margin_left = 1600.0
+margin_top = 900.0
+margin_right = 1640.0
+margin_bottom = 938.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="\?\?6" type="TextureRect" parent="Mask"]
+margin_left = 1420.0
+margin_top = 1320.0
+margin_right = 1440.0
+margin_bottom = 1378.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="\?\?7" type="TextureRect" parent="Mask"]
+margin_left = 790.0
+margin_top = 1285.0
+margin_right = 810.0
+margin_bottom = 1328.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="\?\?8" type="TextureRect" parent="Mask"]
+margin_left = 380.0
+margin_top = 1590.0
+margin_right = 426.0
+margin_bottom = 1600.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="\?\?9" type="TextureRect" parent="Mask"]
+margin_left = 340.0
+margin_top = 1260.0
+margin_right = 348.0
+margin_bottom = 1307.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="\?\?10" type="TextureRect" parent="Mask"]
+margin_left = 1060.0
+margin_top = 800.0
+margin_right = 1080.0
+margin_bottom = 805.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="\?\?3" type="TextureRect" parent="Mask"]
+margin_left = 1680.0
+margin_top = 310.0
+margin_right = 1741.0
+margin_bottom = 325.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1_01" type="TextureRect" parent="Mask"]
+visible = false
+margin_left = 2230.0
+margin_top = 1320.0
+margin_right = 2240.0
+margin_bottom = 1330.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1_02" type="TextureRect" parent="Mask"]
+margin_left = 2140.0
+margin_top = 1320.0
+margin_right = 2150.0
+margin_bottom = 1330.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6_01" type="TextureRect" parent="Mask"]
+margin_left = 1240.0
+margin_top = 780.0
+margin_right = 1250.0
+margin_bottom = 790.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6_02" type="TextureRect" parent="Mask"]
+margin_left = 1330.0
+margin_top = 780.0
+margin_right = 1350.0
+margin_bottom = 790.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6_03" type="TextureRect" parent="Mask"]
+margin_left = 1510.0
+margin_top = 780.0
+margin_right = 1520.0
+margin_bottom = 790.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6_04" type="TextureRect" parent="Mask"]
+margin_left = 1510.0
+margin_top = 870.0
+margin_right = 1520.0
+margin_bottom = 880.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6_05" type="TextureRect" parent="Mask"]
+margin_left = 1410.0
+margin_top = 600.0
+margin_right = 1420.0
+margin_bottom = 620.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6_06" type="TextureRect" parent="Mask"]
+margin_left = 1500.0
+margin_top = 510.0
+margin_right = 1510.0
+margin_bottom = 530.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6_07" type="TextureRect" parent="Mask"]
+margin_left = 1590.0
+margin_top = 600.0
+margin_right = 1600.0
+margin_bottom = 610.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6_08" type="TextureRect" parent="Mask"]
+margin_left = 1680.0
+margin_top = 510.0
+margin_right = 1700.0
+margin_bottom = 530.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6_09" type="TextureRect" parent="Mask"]
+margin_left = 1500.0
+margin_top = 420.0
+margin_right = 1510.0
+margin_bottom = 430.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6_11" type="TextureRect" parent="Mask"]
+margin_left = 1500.0
+margin_top = 330.0
+margin_right = 1510.0
+margin_bottom = 340.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6_12" type="TextureRect" parent="Mask"]
+margin_left = 1590.0
+margin_top = 330.0
+margin_right = 1600.0
+margin_bottom = 340.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6_10" type="TextureRect" parent="Mask"]
+margin_left = 1410.0
+margin_top = 330.0
+margin_right = 1420.0
+margin_bottom = 350.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="1_03" type="TextureRect" parent="Mask"]
+margin_left = 2050.0
+margin_top = 1230.0
+margin_right = 2060.0
+margin_bottom = 1250.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="1_04" type="TextureRect" parent="Mask"]
+margin_left = 1960.0
+margin_top = 1230.0
+margin_right = 1970.0
+margin_bottom = 1240.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="1_05" type="TextureRect" parent="Mask"]
+margin_left = 1960.0
+margin_top = 1140.0
+margin_right = 1970.0
+margin_bottom = 1150.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="1_06" type="TextureRect" parent="Mask"]
+margin_left = 1960.0
+margin_top = 1320.0
+margin_right = 1970.0
+margin_bottom = 1330.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="1_07" type="TextureRect" parent="Mask"]
+margin_left = 1960.0
+margin_top = 1410.0
+margin_right = 1970.0
+margin_bottom = 1420.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="1_08" type="TextureRect" parent="Mask"]
+margin_left = 2050.0
+margin_top = 1410.0
+margin_right = 2060.0
+margin_bottom = 1420.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="1_09" type="TextureRect" parent="Mask"]
+margin_left = 1780.0
+margin_top = 1320.0
+margin_right = 1800.0
+margin_bottom = 1330.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="1_10" type="TextureRect" parent="Mask"]
+margin_left = 1690.0
+margin_top = 1320.0
+margin_right = 1700.0
+margin_bottom = 1330.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+
+[node name="1_11" type="TextureRect" parent="Mask"]
+margin_left = 1600.0
+margin_top = 1320.0
+margin_right = 1610.0
+margin_bottom = 1330.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_01" type="TextureRect" parent="Mask"]
+margin_left = 1330.0
+margin_top = 1320.0
+margin_right = 1340.0
+margin_bottom = 1330.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3_01" type="TextureRect" parent="Mask"]
+margin_left = 1330.0
+margin_top = 1500.0
+margin_right = 1340.0
+margin_bottom = 1510.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5_01" type="TextureRect" parent="Mask"]
+margin_left = 1600.0
+margin_top = 1590.0
+margin_right = 1610.0
+margin_bottom = 1600.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5_02" type="TextureRect" parent="Mask"]
+margin_left = 1690.0
+margin_top = 1590.0
+margin_right = 1700.0
+margin_bottom = 1610.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5_03" type="TextureRect" parent="Mask"]
+margin_left = 1780.0
+margin_top = 1680.0
+margin_right = 1790.0
+margin_bottom = 1690.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5_04" type="TextureRect" parent="Mask"]
+margin_left = 1870.0
+margin_top = 1680.0
+margin_right = 1880.0
+margin_bottom = 1690.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5_05" type="TextureRect" parent="Mask"]
+margin_left = 1870.0
+margin_top = 1590.0
+margin_right = 1880.0
+margin_bottom = 1600.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5_06" type="TextureRect" parent="Mask"]
+margin_left = 1960.0
+margin_top = 1680.0
+margin_right = 1980.0
+margin_bottom = 1690.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5_08" type="TextureRect" parent="Mask"]
+margin_left = 2050.0
+margin_top = 1770.0
+margin_right = 2070.0
+margin_bottom = 1790.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="5_07" type="TextureRect" parent="Mask"]
+margin_left = 2140.0
+margin_top = 1680.0
+margin_right = 2150.0
+margin_bottom = 1690.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3_03" type="TextureRect" parent="Mask"]
+margin_left = 1240.0
+margin_top = 1590.0
+margin_right = 1250.0
+margin_bottom = 1600.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3_04" type="TextureRect" parent="Mask"]
+margin_left = 1240.0
+margin_top = 1680.0
+margin_right = 1250.0
+margin_bottom = 1690.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3_05" type="TextureRect" parent="Mask"]
+margin_left = 1150.0
+margin_top = 1680.0
+margin_right = 1160.0
+margin_bottom = 1690.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3_06" type="TextureRect" parent="Mask"]
+margin_left = 1060.0
+margin_top = 1680.0
+margin_right = 1070.0
+margin_bottom = 1690.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3_07" type="TextureRect" parent="Mask"]
+margin_left = 970.0
+margin_top = 1590.0
+margin_right = 980.0
+margin_bottom = 1610.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3_08" type="TextureRect" parent="Mask"]
+margin_left = 970.0
+margin_top = 1500.0
+margin_right = 980.0
+margin_bottom = 1510.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3_09" type="TextureRect" parent="Mask"]
+margin_left = 1150.0
+margin_top = 1770.0
+margin_right = 1170.0
+margin_bottom = 1780.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3_10" type="TextureRect" parent="Mask"]
+margin_left = 1150.0
+margin_top = 1860.0
+margin_right = 1160.0
+margin_bottom = 1870.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3_11" type="TextureRect" parent="Mask"]
+margin_left = 1240.0
+margin_top = 1860.0
+margin_right = 1260.0
+margin_bottom = 1880.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="3_02" type="TextureRect" parent="Mask"]
+margin_left = 1330.0
+margin_top = 1590.0
+margin_right = 1340.0
+margin_bottom = 1620.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_02" type="TextureRect" parent="Mask"]
+margin_left = 1240.0
+margin_top = 1320.0
+margin_right = 1250.0
+margin_bottom = 1330.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_03" type="TextureRect" parent="Mask"]
+margin_left = 1240.0
+margin_top = 1410.0
+margin_right = 1250.0
+margin_bottom = 1420.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_04" type="TextureRect" parent="Mask"]
+margin_left = 1330.0
+margin_top = 1410.0
+margin_right = 1340.0
+margin_bottom = 1420.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_05" type="TextureRect" parent="Mask"]
+margin_left = 970.0
+margin_top = 1320.0
+margin_right = 980.0
+margin_bottom = 1340.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_06" type="TextureRect" parent="Mask"]
+margin_left = 1060.0
+margin_top = 1230.0
+margin_right = 1080.0
+margin_bottom = 1250.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_07" type="TextureRect" parent="Mask"]
+margin_left = 1150.0
+margin_top = 1140.0
+margin_right = 1170.0
+margin_bottom = 1150.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4_01" type="TextureRect" parent="Mask"]
+margin_left = 610.0
+margin_top = 1320.0
+margin_right = 630.0
+margin_bottom = 1330.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4_02" type="TextureRect" parent="Mask"]
+margin_left = 520.0
+margin_top = 1320.0
+margin_right = 530.0
+margin_bottom = 1330.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4_03" type="TextureRect" parent="Mask"]
+margin_left = 520.0
+margin_top = 1230.0
+margin_right = 530.0
+margin_bottom = 1240.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4_04" type="TextureRect" parent="Mask"]
+margin_left = 520.0
+margin_top = 1140.0
+margin_right = 530.0
+margin_bottom = 1150.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4_05" type="TextureRect" parent="Mask"]
+margin_left = 430.0
+margin_top = 1140.0
+margin_right = 440.0
+margin_bottom = 1150.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4_06" type="TextureRect" parent="Mask"]
+margin_left = 430.0
+margin_top = 1230.0
+margin_right = 440.0
+margin_bottom = 1250.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4_07" type="TextureRect" parent="Mask"]
+margin_left = 340.0
+margin_top = 1140.0
+margin_right = 350.0
+margin_bottom = 1150.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4_08" type="TextureRect" parent="Mask"]
+margin_left = 250.0
+margin_top = 1140.0
+margin_right = 260.0
+margin_bottom = 1150.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4_09" type="TextureRect" parent="Mask"]
+margin_left = 250.0
+margin_top = 1230.0
+margin_right = 260.0
+margin_bottom = 1240.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4_10" type="TextureRect" parent="Mask"]
+margin_left = 160.0
+margin_top = 1140.0
+margin_right = 170.0
+margin_bottom = 1150.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4_11" type="TextureRect" parent="Mask"]
+margin_left = 70.0
+margin_top = 1140.0
+margin_right = 80.0
+margin_bottom = 1150.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="4_12" type="TextureRect" parent="Mask"]
+margin_left = 160.0
+margin_top = 1050.0
+margin_right = 170.0
+margin_bottom = 1060.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_08" type="TextureRect" parent="Mask"]
+margin_left = 1330.0
+margin_top = 1140.0
+margin_right = 1340.0
+margin_bottom = 1150.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_09" type="TextureRect" parent="Mask"]
+margin_left = 1330.0
+margin_top = 960.0
+margin_right = 1340.0
+margin_bottom = 980.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_10" type="TextureRect" parent="Mask"]
+margin_left = 1420.0
+margin_top = 960.0
+margin_right = 1430.0
+margin_bottom = 970.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_11" type="TextureRect" parent="Mask"]
+margin_left = 1240.0
+margin_top = 960.0
+margin_right = 1250.0
+margin_bottom = 970.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_12" type="TextureRect" parent="Mask"]
+margin_left = 1060.0
+margin_top = 1140.0
+margin_right = 1070.0
+margin_bottom = 1150.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_13" type="TextureRect" parent="Mask"]
+margin_left = 1060.0
+margin_top = 1050.0
+margin_right = 1070.0
+margin_bottom = 1060.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_14" type="TextureRect" parent="Mask"]
+margin_left = 1060.0
+margin_top = 960.0
+margin_right = 1070.0
+margin_bottom = 970.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_15" type="TextureRect" parent="Mask"]
+margin_left = 970.0
+margin_top = 870.0
+margin_right = 980.0
+margin_bottom = 890.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="2_16" type="TextureRect" parent="Mask"]
+margin_left = 970.0
+margin_top = 780.0
+margin_right = 980.0
+margin_bottom = 790.0
+rect_scale = Vector2( 9, 9 )
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Position" type="Control" parent="."]
+visible = false
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="1_01" type="Position2D" parent="Position"]
+position = Vector2( 2275, 1365 )
+
+[node name="1_02" type="Position2D" parent="Position"]
+position = Vector2( 2185, 1365 )
+
+[node name="2_01" type="Position2D" parent="Position"]
+position = Vector2( 1375, 1365 )
+
+[node name="3_01" type="Position2D" parent="Position"]
+position = Vector2( 1375, 1545 )
+
+[node name="5_01" type="Position2D" parent="Position"]
+position = Vector2( 1645, 1635 )
+
+[node name="5_02" type="Position2D" parent="Position"]
+position = Vector2( 1735, 1680 )
+
+[node name="5_03" type="Position2D" parent="Position"]
+position = Vector2( 1825, 1725 )
+
+[node name="5_04" type="Position2D" parent="Position"]
+position = Vector2( 1915, 1725 )
+
+[node name="5_05" type="Position2D" parent="Position"]
+position = Vector2( 1915, 1635 )
+
+[node name="5_06" type="Position2D" parent="Position"]
+position = Vector2( 2050, 1725 )
+
+[node name="5_07" type="Position2D" parent="Position"]
+position = Vector2( 2185, 1725 )
+
+[node name="5_08" type="Position2D" parent="Position"]
+position = Vector2( 2140, 1860 )
+
+[node name="3_02" type="Position2D" parent="Position"]
+position = Vector2( 1375, 1725 )
+
+[node name="3_03" type="Position2D" parent="Position"]
+position = Vector2( 1285, 1635 )
+
+[node name="3_04" type="Position2D" parent="Position"]
+position = Vector2( 1285, 1725 )
+
+[node name="3_05" type="Position2D" parent="Position"]
+position = Vector2( 1195, 1725 )
+
+[node name="3_06" type="Position2D" parent="Position"]
+position = Vector2( 1105, 1725 )
+
+[node name="3_07" type="Position2D" parent="Position"]
+position = Vector2( 1015, 1680 )
+
+[node name="3_08" type="Position2D" parent="Position"]
+position = Vector2( 1015, 1545 )
+
+[node name="3_09" type="Position2D" parent="Position"]
+position = Vector2( 1240, 1815 )
+
+[node name="3_10" type="Position2D" parent="Position"]
+position = Vector2( 1195, 1910 )
+
+[node name="3_11" type="Position2D" parent="Position"]
+position = Vector2( 1330, 1950 )
+
+[node name="2_02" type="Position2D" parent="Position"]
+position = Vector2( 1285, 1365 )
+
+[node name="2_03" type="Position2D" parent="Position"]
+position = Vector2( 1285, 1455 )
+
+[node name="2_04" type="Position2D" parent="Position"]
+position = Vector2( 1375, 1455 )
+
+[node name="4_01" type="Position2D" parent="Position"]
+position = Vector2( 700, 1365 )
+
+[node name="4_02" type="Position2D" parent="Position"]
+position = Vector2( 565, 1365 )
+
+[node name="4_03" type="Position2D" parent="Position"]
+position = Vector2( 565, 1275 )
+
+[node name="4_04" type="Position2D" parent="Position"]
+position = Vector2( 565, 1185 )
+
+[node name="4_05" type="Position2D" parent="Position"]
+position = Vector2( 475, 1185 )
+
+[node name="4_06" type="Position2D" parent="Position"]
+position = Vector2( 475, 1320 )
+
+[node name="4_07" type="Position2D" parent="Position"]
+position = Vector2( 385, 1185 )
+
+[node name="4_08" type="Position2D" parent="Position"]
+position = Vector2( 295, 1185 )
+
+[node name="4_09" type="Position2D" parent="Position"]
+position = Vector2( 295, 1275 )
+
+[node name="4_10" type="Position2D" parent="Position"]
+position = Vector2( 205, 1185 )
+
+[node name="4_11" type="Position2D" parent="Position"]
+position = Vector2( 115, 1185 )
+
+[node name="4_12" type="Position2D" parent="Position"]
+position = Vector2( 205, 1090 )
+
+[node name="2_05" type="Position2D" parent="Position"]
+position = Vector2( 1015, 1420 )
+
+[node name="2_06" type="Position2D" parent="Position"]
+position = Vector2( 1150, 1320 )
+
+[node name="2_07" type="Position2D" parent="Position"]
+position = Vector2( 1240, 1185 )
+
+[node name="2_08" type="Position2D" parent="Position"]
+position = Vector2( 1375, 1185 )
+
+[node name="2_09" type="Position2D" parent="Position"]
+position = Vector2( 1375, 1050 )
+
+[node name="2_10" type="Position2D" parent="Position"]
+position = Vector2( 1465, 1005 )
+
+[node name="2_11" type="Position2D" parent="Position"]
+position = Vector2( 1285, 1005 )
+
+[node name="2_12" type="Position2D" parent="Position"]
+position = Vector2( 1105, 1185 )
+
+[node name="2_13" type="Position2D" parent="Position"]
+position = Vector2( 1105, 1095 )
+
+[node name="2_14" type="Position2D" parent="Position"]
+position = Vector2( 1105, 1005 )
+
+[node name="2_15" type="Position2D" parent="Position"]
+position = Vector2( 1015, 960 )
+
+[node name="2_16" type="Position2D" parent="Position"]
+position = Vector2( 1015, 825 )
+
+[node name="6_01" type="Position2D" parent="Position"]
+position = Vector2( 1285, 825 )
+
+[node name="6_02" type="Position2D" parent="Position"]
+position = Vector2( 1410, 825 )
+
+[node name="6_03" type="Position2D" parent="Position"]
+position = Vector2( 1555, 825 )
+
+[node name="6_04" type="Position2D" parent="Position"]
+position = Vector2( 1555, 915 )
+
+[node name="6_05" type="Position2D" parent="Position"]
+position = Vector2( 1455, 690 )
+
+[node name="6_06" type="Position2D" parent="Position"]
+position = Vector2( 1545, 600 )
+
+[node name="6_07" type="Position2D" parent="Position"]
+position = Vector2( 1635, 645 )
+
+[node name="6_08" type="Position2D" parent="Position"]
+position = Vector2( 1770, 600 )
+
+[node name="6_09" type="Position2D" parent="Position"]
+position = Vector2( 1545, 465 )
+
+[node name="6_10" type="Position2D" parent="Position"]
+position = Vector2( 1455, 420 )
+
+[node name="6_11" type="Position2D" parent="Position"]
+position = Vector2( 1545, 375 )
+
+[node name="6_12" type="Position2D" parent="Position"]
+position = Vector2( 1635, 375 )
+
+[node name="1_03" type="Position2D" parent="Position"]
+position = Vector2( 2095, 1320 )
+
+[node name="1_04" type="Position2D" parent="Position"]
+position = Vector2( 2005, 1275 )
+
+[node name="1_05" type="Position2D" parent="Position"]
+position = Vector2( 2005, 1185 )
+
+[node name="1_06" type="Position2D" parent="Position"]
+position = Vector2( 2005, 1365 )
+
+[node name="1_07" type="Position2D" parent="Position"]
+position = Vector2( 2005, 1455 )
+
+[node name="1_08" type="Position2D" parent="Position"]
+position = Vector2( 2095, 1455 )
+
+[node name="1_09" type="Position2D" parent="Position"]
+position = Vector2( 1870, 1365 )
+
+[node name="1_10" type="Position2D" parent="Position"]
+position = Vector2( 1735, 1365 )
+
+[node name="1_11" type="Position2D" parent="Position"]
+position = Vector2( 1645, 1365 )
