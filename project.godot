@@ -17,6 +17,7 @@ config/icon="res://icon.png"
 [autoload]
 
 SignalBus="*res://SignalBus.tscn"
+PlayerStats="*res://player/player_stats.tscn"
 
 [display]
 
@@ -32,6 +33,7 @@ window/stretch/aspect="expand"
 
 filter=false
 fullscreen=false
+scene=false
 
 [importer_defaults]
 
