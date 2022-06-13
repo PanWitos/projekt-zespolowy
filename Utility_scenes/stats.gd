@@ -32,6 +32,7 @@ func save():
 		"canDash" : canDash,
 		"canFireball" : canFireball
 	}
+	print("playerStats save")
 	return save_dict
 
 
