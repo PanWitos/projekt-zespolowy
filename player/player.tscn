@@ -351,8 +351,8 @@ limit_right = 2256
 limit_bottom = 1528
 
 [node name="player_stats" parent="." instance=ExtResource( 6 )]
-maxCombo = 3
-additionalJumps = 3
+canDive = false
+canDash = false
 
 [connection signal="timeout" from="ComboTimer" to="." method="_on_ComboTimer_timeout"]
 [connection signal="timeout" from="AttackCooldownTimer" to="." method="_on_AttackCooldownTimer_timeout"]

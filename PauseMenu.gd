@@ -8,6 +8,8 @@ func _ready():
 func displayText(value):
 	match value:
 		0:
-			info.text = "siema eniu"
+			info.text = "Ability 0"
 		1: 
-			info.text = "fajny wehikuł"
+			info.text = "Ability 1"
+		2:
+			info.text = "Ability 2"

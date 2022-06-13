@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/locations/TileMapForeground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Exit.tscn" type="PackedScene" id=2]
 [ext_resource path="res://World/ID.gd" type="Script" id=3]
 [ext_resource path="res://assets/locations/TileMapBackground.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/locations/GrassLand/Background/ParallaxBackground1x1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://opponents/squirrel/squirrel.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24, 528 )
@@ -60,6 +61,12 @@ position = Vector2( 80, 1008 )
 
 [node name="startPoint" type="Position2D" parent="."]
 position = Vector2( 720, 1008 )
+
+[node name="squirrel" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1712, 120 )
+
+[node name="squirrel2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1384, 120 )
 
 [editable path="Exit1"]
 [editable path="Exit2"]
