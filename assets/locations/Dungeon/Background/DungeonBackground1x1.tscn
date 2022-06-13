@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/locations/Dungeon/Background/Dungeon_Background_1v2.png" type="Texture" id=1]
+
+[node name="DungeonBackground1x1" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="Ściany" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2( 0.4, 0.401 )
+motion_mirroring = Vector2( 2144, 1091.69 )
+
+[node name="Sprite" type="Sprite" parent="ParallaxBackground/Ściany"]
+position = Vector2( 1072, 548 )
+scale = Vector2( 4.62069, 5.26923 )
+texture = ExtResource( 1 )

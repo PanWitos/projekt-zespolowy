@@ -88,7 +88,7 @@ func _process(delta):
 	match id:
 		0:
 			camera.limit_right = 2256
-			camera.limit_bottom = 1528
+			camera.limit_bottom = 1528 #offset +232 do bottom
 		1:
 			camera.limit_right = 4512
 			camera.limit_bottom = 1528
@@ -100,14 +100,12 @@ func _process(delta):
 			camera.limit_bottom = 2840
 		4:
 			camera.limit_right = 2256
-			camera.limit_bottom = 1528
+			camera.limit_bottom = 4120
 	
 func _physics_process(delta):
 	
 	match state:
 		NORMAL:
-			if Input.is_action_just_pressed("ui_cancel"):
-				get_tree().quit()
 			
 			var input_vector = Vector2.ZERO
 			input_vector.x = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")) * MAX_SPEED_H
