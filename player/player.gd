@@ -89,7 +89,7 @@ func _process(delta):
 	match id:
 		0:
 			camera.limit_right = 2256
-			camera.limit_bottom = 1528
+			camera.limit_bottom = 1528 #offset +232 do bottom
 		1:
 			camera.limit_right = 4512
 			camera.limit_bottom = 1528
@@ -101,7 +101,7 @@ func _process(delta):
 			camera.limit_bottom = 2840
 		4:
 			camera.limit_right = 2256
-			camera.limit_bottom = 1528
+			camera.limit_bottom = 4120
 	
 func _physics_process(delta):
 	
