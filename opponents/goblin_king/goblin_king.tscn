@@ -1,9 +1,10 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=30 format=2]
 
 [ext_resource path="res://opponents/goblin_king/Goblin King - boss.png" type="Texture" id=1]
 [ext_resource path="res://Hitboxes_and_Hurtboxes/hurtbox.tscn" type="PackedScene" id=2]
 [ext_resource path="res://opponents/goblin_king/goblin_king.gd" type="Script" id=3]
 [ext_resource path="res://opponents/Stats.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Hitboxes_and_Hurtboxes/hitbox.tscn" type="PackedScene" id=5]
 
 [sub_resource type="RectangleShape2D" id=23]
 extents = Vector2( 32, 44 )
@@ -411,6 +412,9 @@ tracks/0/keys = {
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 40, 48 )
 
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 57, 10 )
+
 [node name="goblin_king" type="KinematicBody2D"]
 script = ExtResource( 3 )
 
@@ -461,7 +465,16 @@ shape = SubResource( 22 )
 [node name="Stats" parent="." instance=ExtResource( 4 )]
 max_health = 100
 
+[node name="hitbox" parent="." instance=ExtResource( 5 )]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="hitbox" index="0"]
+position = Vector2( 48, -8 )
+shape = SubResource( 24 )
+
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
 [connection signal="no_health" from="Stats" to="." method="_on_Stats_no_health"]
 
 [editable path="hurtbox"]
+[editable path="hitbox"]
