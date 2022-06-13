@@ -18,6 +18,7 @@ config/icon="res://icon.png"
 
 SignalBus="*res://SignalBus.tscn"
 PlayerStats="*res://player/player_stats.tscn"
+GlobalVariables="*res://GlobalVariables.tscn"
 
 [display]
 
