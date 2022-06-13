@@ -11,13 +11,14 @@ config_version=4
 [application]
 
 config/name="gierka"
-run/main_scene="res://GameControl.tscn"
+run/main_scene="res://MainMenu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 SignalBus="*res://SignalBus.tscn"
 PlayerStats="*res://player/player_stats.tscn"
+GlobalVariables="*res://GlobalVariables.tscn"
 
 [display]
 

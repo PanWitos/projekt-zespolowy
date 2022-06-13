@@ -11,3 +11,11 @@ func changeCameraPos(name):
 func liftMask(name):
 	var tile = mask.get_node(name)
 	tile.visible = false
+
+func checkMap():
+	var masks = GlobalVariables.list
+	for m in masks:
+		mask.get_node(m).visible = false
+	
+func _process(delta):
+	checkMap()
