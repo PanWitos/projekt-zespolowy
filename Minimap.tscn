@@ -13,6 +13,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 4910.0
+margin_bottom = 3515.0
+color = Color( 0, 0.356863, 0.478431, 1 )
+
 [node name="TextureRect" type="TextureRect" parent="."]
 margin_right = 40.0
 margin_bottom = 40.0
@@ -26,7 +31,7 @@ __meta__ = {
 light_mask = 2
 position = Vector2( 2275, 1365 )
 current = true
-zoom = Vector2( 0.6, 0.6 )
+zoom = Vector2( 1.5, 1.5 )
 __meta__ = {
 "_edit_group_": true
 }
@@ -51,9 +56,9 @@ __meta__ = {
 }
 
 [node name="\?\?" type="TextureRect" parent="Mask"]
-margin_left = 2130.0
+margin_left = 2140.0
 margin_top = 1440.0
-margin_right = 2152.0
+margin_right = 2161.0
 margin_bottom = 1464.0
 rect_scale = Vector2( 9, 9 )
 texture = ExtResource( 3 )
@@ -76,9 +81,9 @@ __meta__ = {
 
 [node name="\?\?2" type="TextureRect" parent="Mask"]
 margin_left = 2230.0
-margin_top = 360.0
-margin_right = 2250.0
-margin_bottom = 467.0
+margin_top = 330.0
+margin_right = 2251.0
+margin_bottom = 440.0
 rect_scale = Vector2( 9, 9 )
 texture = ExtResource( 3 )
 expand = true

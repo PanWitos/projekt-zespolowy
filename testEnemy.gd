@@ -8,9 +8,13 @@ func _ready():
 
 
 func _physics_process(delta):
-	print(health)
-	#pass
+	#print(health)
+	pass
 
 
 func _on_hurtbox_area_entered(area):
 	health -= 10
+
+
+func _on_hitbox_body_entered(body):
+	pass

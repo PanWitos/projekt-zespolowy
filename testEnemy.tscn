@@ -1,13 +1,17 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Hitboxes_and_Hurtboxes/hurtbox.tscn" type="PackedScene" id=1]
 [ext_resource path="res://testEnemy.gd" type="Script" id=2]
+[ext_resource path="res://Hitboxes_and_Hurtboxes/hitbox.tscn" type="PackedScene" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12, 23.5 )
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 12, 23.25 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 15.5, 10 )
 
 [node name="testEnemy" type="KinematicBody2D"]
 script = ExtResource( 2 )
@@ -20,10 +24,22 @@ shape = SubResource( 1 )
 [node name="hurtbox" parent="." instance=ExtResource( 1 )]
 position = Vector2( 0, -0.5 )
 scale = Vector2( 2, 2 )
+collision_layer = 8
+collision_mask = 0
 
 [node name="CollisionShape2D" parent="hurtbox" index="0"]
 shape = SubResource( 2 )
 
+[node name="hitbox" parent="." instance=ExtResource( 3 )]
+collision_layer = 0
+collision_mask = 4
+
+[node name="CollisionShape2D" parent="hitbox" index="0"]
+position = Vector2( 37.5, 1 )
+shape = SubResource( 3 )
+
 [connection signal="area_entered" from="hurtbox" to="." method="_on_hurtbox_area_entered"]
+[connection signal="body_entered" from="hitbox" to="." method="_on_hitbox_body_entered"]
 
 [editable path="hurtbox"]
+[editable path="hitbox"]

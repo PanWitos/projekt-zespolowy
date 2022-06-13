@@ -9,9 +9,11 @@ export var canDash = true
 export var canFireball = true
 
 signal noHealth
+signal health_changed(value)
 
 func setCurrHealth(value):
 	currHealth = value
+	emit_signal("health_changed", currHealth)
 	if currHealth <= 0:
 		emit_signal("noHealth")
 
@@ -31,3 +33,7 @@ func save():
 		"canFireball" : canFireball
 	}
 	return save_dict
+
+
+func _on_player_stats_healthChanged(value):
+	pass # Replace with function body.
