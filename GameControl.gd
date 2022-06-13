@@ -6,7 +6,7 @@ onready var world = $World
 onready var minimap2 = $CanvasLayer/HUD/TextureRect/ViewportContainer/Viewport/Minimap
 
 func _process(delta):
-	if Input.is_action_just_pressed("ui_home"):
+	if Input.is_action_just_pressed("ui_cancel"):
 		if get_tree().paused:
 			get_tree().paused = false
 			menu.visible = false

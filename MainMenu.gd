@@ -1,14 +1,5 @@
 extends Control
 
-
-
-func _on_Button_pressed():
-	get_tree().change_scene("res://GameControl.tscn")
-
-
-func _on_Button2_pressed():
-	loadGame()
-
 func loadGame():
 	var save_game = File.new()
 	if not save_game.file_exists("user://savegame.save"):
@@ -35,3 +26,15 @@ func loadGame():
 	
 	get_tree().change_scene("res://GameControl.tscn")
 	
+
+
+func _on_New_pressed():
+	get_tree().change_scene("res://GameControl.tscn")
+
+
+func _on_Load_pressed():
+	loadGame()
+
+
+func _on_Quit_pressed():
+	get_tree().quit()

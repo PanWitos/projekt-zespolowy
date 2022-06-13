@@ -106,8 +106,6 @@ func _physics_process(delta):
 	
 	match state:
 		NORMAL:
-			if Input.is_action_just_pressed("ui_cancel"):
-				get_tree().quit()
 			
 			var input_vector = Vector2.ZERO
 			input_vector.x = (Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")) * MAX_SPEED_H

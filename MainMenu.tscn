@@ -20,25 +20,36 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
-margin_left = 560.0
-margin_top = 248.0
-margin_right = 1344.0
-margin_bottom = 448.0
+[node name="New" type="Button" parent="."]
+margin_left = 568.0
+margin_top = 120.0
+margin_right = 1352.0
+margin_bottom = 320.0
 text = "Start Game"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button2" type="Button" parent="."]
-margin_left = 560.0
-margin_top = 536.0
-margin_right = 1344.0
-margin_bottom = 736.0
+[node name="Load" type="Button" parent="."]
+margin_left = 568.0
+margin_top = 456.0
+margin_right = 1352.0
+margin_bottom = 656.0
 text = "Load Game"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
+[node name="Quit" type="Button" parent="."]
+margin_left = 560.0
+margin_top = 768.0
+margin_right = 1344.0
+margin_bottom = 968.0
+text = "Quit Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="New" to="." method="_on_New_pressed"]
+[connection signal="pressed" from="Load" to="." method="_on_Load_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_Quit_pressed"]
