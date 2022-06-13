@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://assets/locations/TileMapForeground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Exit.tscn" type="PackedScene" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/locations/TileMapBackground.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/locations/GrassLand/Background/ParallaxBackground1x1.tscn" type="PackedScene" id=5]
 [ext_resource path="res://opponents/goblin_king/goblin_king.tscn" type="PackedScene" id=6]
+[ext_resource path="res://player/player.tscn" type="PackedScene" id=7]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12, 528 )
@@ -47,6 +48,8 @@ position = Vector2( 80, 1008 )
 
 [node name="startPoint" type="Position2D" parent="."]
 position = Vector2( 2024, 1008 )
+
+[node name="player" parent="." instance=ExtResource( 7 )]
 
 [node name="goblin_king" parent="." instance=ExtResource( 6 )]
 position = Vector2( 1032, 832 )
