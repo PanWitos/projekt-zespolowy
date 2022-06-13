@@ -17,8 +17,8 @@ var acceleration_v = 0
 var velocity = Vector2.ZERO
 var knockback = Vector2.ZERO
 var is_moving_left = true
-
 onready var stats = $Stats
+
 
 func numberMoveToward(from, to, delta):
 	
@@ -37,7 +37,7 @@ func numberMoveToward(from, to, delta):
 			return from - delta
 		else:
 			return to
-			
+
 func _physics_process(delta):
 	$AnimationPlayer.play(\"RunLeft\")
 	
@@ -121,6 +121,7 @@ tracks/1/keys = {
 [sub_resource type="Animation" id=11]
 resource_name = "GotHit"
 length = 0.4
+loop = true
 tracks/0/type = "value"
 tracks/0/path = NodePath("Sprite:frame")
 tracks/0/interp = 1
@@ -175,18 +176,6 @@ tracks/0/keys = {
 "transitions": PoolRealArray( 1 ),
 "update": 0,
 "values": [ 0 ]
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath("Sprite:flip_h")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 0,
-"values": [ false ]
 }
 
 [sub_resource type="Animation" id=7]
