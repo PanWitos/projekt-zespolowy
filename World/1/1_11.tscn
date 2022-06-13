@@ -1,12 +1,11 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://assets/locations/TileMapForeground.tscn" type="PackedScene" id=1]
 [ext_resource path="res://World/Exit.tscn" type="PackedScene" id=2]
-
 [ext_resource path="res://World/ID.gd" type="Script" id=3]
-
 [ext_resource path="res://assets/locations/TileMapBackground.tscn" type="PackedScene" id=4]
 [ext_resource path="res://assets/locations/GrassLand/Background/ParallaxBackground1x1.tscn" type="PackedScene" id=5]
+[ext_resource path="res://opponents/goblin_king/goblin_king.tscn" type="PackedScene" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 12, 528 )
@@ -15,14 +14,11 @@ extents = Vector2( 12, 528 )
 extents = Vector2( 8.5, 196 )
 
 [node name="1_11" type="Node2D"]
-
 script = ExtResource( 3 )
-
 
 [node name="ParallaxBackground1x1" parent="." instance=ExtResource( 5 )]
 
 [node name="TileMapBackground" parent="." instance=ExtResource( 4 )]
-
 tile_data = PoolIntArray( 1703975, 1, 196617, 1703976, 1, 196617, 1703977, 1, 196617, 1703982, 1, 196617, 1703983, 1, 196617 )
 
 [node name="TileMapForeground" parent="." instance=ExtResource( 1 )]
@@ -32,30 +28,29 @@ tile_data = PoolIntArray( 44, 0, 0, 45, 0, 1, 46, 0, 1, 47, 0, 3, 65579, 0, 0, 6
 position = Vector2( 1856, 936 )
 code = "1_10_2"
 
-
 [node name="CollisionShape2D" parent="Exit1" index="0"]
 position = Vector2( 312, -400 )
 shape = SubResource( 1 )
 
 [node name="Exit2" parent="." instance=ExtResource( 2 )]
-
 code = "2_01_1"
-
 
 [node name="CollisionShape2D" parent="Exit2" index="0"]
 position = Vector2( 7.5, 892 )
 shape = SubResource( 2 )
 
 [node name="1" type="Position2D" parent="."]
-position = Vector2( 2096, 1008 )
-
+position = Vector2( 2024, 1008 )
 
 [node name="2" type="Position2D" parent="."]
 position = Vector2( 80, 1008 )
 
-
 [node name="startPoint" type="Position2D" parent="."]
-position = Vector2( 2096, 1008 )
+position = Vector2( 2024, 1008 )
+
+[node name="goblin_king" parent="." instance=ExtResource( 6 )]
+position = Vector2( 1032, 832 )
+scale = Vector2( 3, 3 )
 
 [editable path="Exit1"]
 [editable path="Exit2"]

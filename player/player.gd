@@ -30,7 +30,6 @@ onready var attack_cooldown_timer = $AttackCooldownTimer
 onready var dash_timer = $DashTimer
 onready var sword_hitbox_area = $SwordHitboxPivot/SwordHitbox
 onready var stats = PlayerStats
-onready var playerStats = $player_stats
 onready var camera = $Camera2D
 
 var velocity_h = 0
@@ -81,7 +80,7 @@ func startComboTimer():
 func attackPerformed():
 	startComboTimer()
 	attacks_performed += 1
-	if attacks_performed >= playerStats.maxCombo:
+	if attacks_performed >= stats.maxCombo:
 		can_attack = false
 		
 func _process(delta):
@@ -117,7 +116,7 @@ func _physics_process(delta):
 				velocity_v = 0
 				acceleration_v = 0
 
-				JUMPS_LEFT = playerStats.additionalJumps
+				JUMPS_LEFT = stats.additionalJumps
 				if Input.is_action_just_pressed("ui_up"):
 					velocity_v = JUMP_SPEED
 					acceleration_v = 0
