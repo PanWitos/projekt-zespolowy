@@ -32,18 +32,18 @@ __meta__ = {
 
 [node name="Load" type="Button" parent="."]
 margin_left = 568.0
-margin_top = 456.0
+margin_top = 448.0
 margin_right = 1352.0
-margin_bottom = 656.0
+margin_bottom = 648.0
 text = "Load Game"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Quit" type="Button" parent="."]
-margin_left = 560.0
+margin_left = 568.0
 margin_top = 768.0
-margin_right = 1344.0
+margin_right = 1352.0
 margin_bottom = 968.0
 text = "Quit Game"
 __meta__ = {

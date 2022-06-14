@@ -24,22 +24,6 @@ region = Rect2( 64, 96, 32, 32 )
 atlas = ExtResource( 2 )
 region = Rect2( 96, 96, 32, 32 )
 
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 2 )
-region = Rect2( 0, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 2 )
-region = Rect2( 32, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 2 )
-region = Rect2( 64, 32, 32, 32 )
-
-[sub_resource type="AtlasTexture" id=4]
-atlas = ExtResource( 2 )
-region = Rect2( 96, 32, 32, 32 )
-
 [sub_resource type="AtlasTexture" id=10]
 atlas = ExtResource( 2 )
 region = Rect2( 0, 0, 32, 32 )
@@ -56,6 +40,22 @@ region = Rect2( 64, 0, 32, 32 )
 atlas = ExtResource( 2 )
 region = Rect2( 96, 0, 32, 32 )
 
+[sub_resource type="AtlasTexture" id=1]
+atlas = ExtResource( 2 )
+region = Rect2( 0, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=2]
+atlas = ExtResource( 2 )
+region = Rect2( 32, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=3]
+atlas = ExtResource( 2 )
+region = Rect2( 64, 32, 32, 32 )
+
+[sub_resource type="AtlasTexture" id=4]
+atlas = ExtResource( 2 )
+region = Rect2( 96, 32, 32, 32 )
+
 [sub_resource type="SpriteFrames" id=5]
 animations = [ {
 "frames": [ SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
@@ -63,14 +63,14 @@ animations = [ {
 "name": "Death",
 "speed": 5.0
 }, {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
-"loop": true,
-"name": "Walk",
-"speed": 5.0
-}, {
 "frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ) ],
 "loop": true,
 "name": "New Anim",
+"speed": 5.0
+}, {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "Walk",
 "speed": 5.0
 } ]
 
@@ -84,7 +84,7 @@ extents = Vector2( 34, 20 )
 extents = Vector2( 34, 20 )
 
 [sub_resource type="RectangleShape2D" id=17]
-extents = Vector2( 211, 62.5 )
+extents = Vector2( 380, 62.5 )
 
 [node name="Hedgehog" type="KinematicBody2D"]
 collision_layer = 0
@@ -94,7 +94,7 @@ script = ExtResource( 1 )
 scale = Vector2( -4, 4 )
 frames = SubResource( 5 )
 animation = "Walk"
-frame = 1
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -127,7 +127,7 @@ collision_mask = 2
 
 [node name="CollisionShape2D" parent="PlayerDetectionZone" index="0"]
 modulate = Color( 0.301961, 0, 0.698039, 0.560784 )
-position = Vector2( 2, 44 )
+position = Vector2( 4, 44 )
 shape = SubResource( 17 )
 
 [node name="RayCastInfront" type="RayCast2D" parent="."]
